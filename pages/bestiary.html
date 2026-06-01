@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover every creature in The Mound: Omen of Cthulhu. Threat levels, habitats, behaviors, and weaknesses for all enemies from the jungle to N'kai.">
+  <meta name="keywords" content="The Mound bestiary, creature guide, Y'm-bhi zombie, Gug, reptile people, formless spawn, Cthulhu monsters">
+  <meta name="author" content="Antigravity Web Designs">
+  
+  <title>Bestiary & Creature Guide — The Mound: Omen of Cthulhu</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://themound.online/pages/bestiary.html">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://themound.online/pages/bestiary.html">
+  <meta property="og:title" content="Bestiary & Creature Guide — The Mound: Omen of Cthulhu">
+  <meta property="og:description" content="Discover every creature in The Mound: Omen of Cthulhu. Threat levels, habitats, behaviors, and weaknesses for all enemies from the jungle to N'kai.">
+  <meta property="og:image" content="https://themound.online/images/creature-eldritch.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Bestiary & Creature Guide — The Mound: Omen of Cthulhu">
+  <meta property="twitter:description" content="Threat levels, habitats, behaviors, and weaknesses for every creature in The Mound.">
+  <meta property="twitter:image" content="https://themound.online/images/creature-eldritch.png">
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Structured Data: Breadcrumb + CollectionPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://themound.online/" },
+          { "@type": "ListItem", "position": 2, "name": "Bestiary", "item": "https://themound.online/pages/bestiary.html" }
+        ]
+      },
+      {
+        "@type": "CollectionPage",
+        "name": "Bestiary & Creature Guide — The Mound: Omen of Cthulhu",
+        "description": "A complete bestiary for The Mound: Omen of Cthulhu with threat levels, habitats, behaviors, and weaknesses for every enemy from the jungle to N'kai.",
+        "image": "https://themound.online/images/creature-eldritch.png",
+        "inLanguage": "en",
+        "about": { "@type": "VideoGame", "name": "The Mound: Omen of Cthulhu" }
+      }
+    ]
+  }
+  </script>
+  <style>
+    .beast-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .beast-card {
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition-smooth);
+    }
+    
+    .beast-card.hidden {
+      display: none;
+    }
+    
+    .beast-stat-line {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(0, 255, 204, 0.05);
+      padding: 0.4rem 0;
+      font-size: 0.85rem;
+    }
+    
+    .beast-stat-label {
+      color: var(--text-muted);
+      font-family: var(--font-header);
+    }
+    
+    .beast-stat-value {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER / STICKY NAVIGATION
+       ========================================================================== -->
+  <header class="header" id="main-header">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo" id="nav-logo">
+        THE MOUND<span>: OMEN OF CTHULHU</span>
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li class="nav-item"><a href="../index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li class="nav-item"><a href="articles/index.html" class="nav-link" id="nav-news">News</a></li>
+          <li class="nav-item"><a href="guides.html" class="nav-link" id="nav-guides">Guides</a></li>
+          <li class="nav-item"><a href="lore.html" class="nav-link" id="nav-lore">Lore</a></li>
+          <li class="nav-item"><a href="bestiary.html" class="nav-link active" id="nav-bestiary">Bestiary</a></li>
+          <li class="nav-item"><a href="equipment.html" class="nav-link" id="nav-equipment">Equipment</a></li>
+          <li class="nav-item"><a href="calculator.html" class="nav-link" id="nav-calculator">Planner</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="nav-hamburger-toggle" aria-label="Toggle mobile menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SUB HERO SECTION
+       ========================================================================== -->
+  <section class="sub-hero" id="bestiary-hero">
+    <div class="sub-hero-bg" style="background-image: url('../images/creature-eldritch.png');"></div>
+    <div class="sub-hero-overlay"></div>
+    <div class="container sub-hero-content">
+      <h1 class="sub-hero-title">SUBTERRANEAN BESTIARY</h1>
+      <p class="sub-hero-desc">
+        A catalog of biological abominations, reanimated corpses, and cosmic entities that inhabit the deep subterranean vaults. Bypassing them is recommended; engaging them is lethal.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FILTER INTERFACE
+       ========================================================================== -->
+  <section style="padding-top: 4rem;">
+    <div class="container">
+      
+      <!-- Habitat filters -->
+      <div style="margin-bottom: 2rem;">
+        <h4 style="text-align: center; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">
+          Filter by Ecosystem Habitat
+        </h4>
+        <div class="filter-container" id="habitat-filters">
+          <button class="filter-btn active" data-habitat="all">All Habitats</button>
+          <button class="filter-btn" data-habitat="jungle">Surface Jungle</button>
+          <button class="filter-btn" data-habitat="kn-yan">Red K'n-yan</button>
+          <button class="filter-btn" data-habitat="yoth">Basalt Yoth</button>
+          <button class="filter-btn" data-habitat="nkai">Abyss N'kai</button>
+        </div>
+      </div>
+
+      <!-- Threat filters -->
+      <div style="margin-bottom: 4rem;">
+        <h4 style="text-align: center; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">
+          Filter by Threat Tier
+        </h4>
+        <div class="filter-container" id="threat-filters">
+          <button class="filter-btn active" data-threat="all">All Tiers</button>
+          <button class="filter-btn" data-threat="low">Low Threat</button>
+          <button class="filter-btn" data-threat="medium">Medium Threat</button>
+          <button class="filter-btn" data-threat="high">High Threat</button>
+          <button class="filter-btn" data-threat="eldritch">Eldritch Threat</button>
+        </div>
+      </div>
+
+      <!-- Grid of Beasts -->
+      <div class="beast-grid" id="beast-container">
+        
+        <!-- Beast 1 -->
+        <article class="card beast-card" data-habitat="kn-yan" data-threat="low">
+          <span class="threat-level threat-low">Low Threat</span>
+          <h3 class="card-title">Y'm-bhi Sentinel</h3>
+          <p class="card-text">
+            Decapitated and reanimated corpses controlled by the telepathic minds of K'n-yan. They walk blindly along stone paths, scanning with high auditory perception.
+          </p>
+          <div style="margin-bottom: 1.5rem;">
+            <div class="beast-stat-line"><span class="beast-stat-label">Habitat</span><span class="beast-stat-value">Red K'n-yan</span></div>
+            <div class="beast-stat-line"><span class="beast-stat-label">Behavior</span><span class="beast-stat-value">Acoustic Sentry</span></div>
+            <div class="beast-stat-line"><span class="beast-stat-label">Weakness</span><span class="beast-stat-value">Maces & Torches</span></div>
+          </div>
+        </article>
+
+        <!-- Beast 2 -->
+        <article class="card beast-card" data-habitat="jungle" data-threat="medium">
+          <span class="threat-level threat-medium">Medium Threat</span>
+          <h3 class="card-title">Watcher of the Mound</h3>
+          <p class="card-text">
+            Ethereal, glowing phantom humanoids hovering over grass mounds. They act as alarm sentries that scream upon detecting light, drawing beasts to your coordinate.
+          </p>
+          <div style="margin-bottom: 1.5rem;">
+            <div class="beast-stat-line"><span class="beast-stat-label">Habitat</span><span class="beast-stat-value">Surface Jungle</span></div>
+            <div class="beast-stat-line"><span class="beast-stat-label">Behavior</span><span class="beast-stat-value">Echolocation Call</span></div>
+            <div class="beast-stat-line"><span class="beast-stat-label">Weakness</span><span class="beast-stat-value">Glow Lantern Shock</span></div>
+          </div>
+        </article>
+
+        <!-- Beast 3 -->
+        <article class="card beast-card card-purple" data-habitat="yoth" data-threat="high">
+          <span class="threat-level threat-high">High Threat</span>
+          <h3 class="card-title">Gug Hulk</h3>
+          <p class="card-text">
+            Shaggy, multi-armed giants with vertical jaws. They break down doors, smash stone pillars, and can smell player scent from up to 50 meters away.
+          </p>
+          <div style="margin-bottom: 1.5rem;">
+            <div class="beast-stat-line"><span class="beast-stat-label">Habitat</span><span class="beast-stat-value">Basalt Yoth</span></div>
+            <div class="beast-stat-line"><span class="beast-stat-label">Behavior</span><span class="beast-stat-value">Heavy Charger</span></div>
+            <div class="beast-stat-line"><span class="beast-stat-label">Weakness</span><span class="beast-stat-value">Steel Traps & Arquebus</span></div>
+          </div>
+        </article>
+
+        <!-- Beast 4 -->
+        <article class="card beast-card card-purple" data-habitat="yoth" data-threat="high">
+          <span class="threat-level threat-high">High Threat</span>
+          <h3 class="card-title">Yothian Reptilian</h3>
+          <p class="card-text">
+            Intelligent reptile scientists that survived Yoth's collapse. They wield gold venom rods and use psychic beams to accelerate players' sanity degradation.
+          </p>
+          <div style="margin-bottom: 1.5rem;">
+            <div class="beast-stat-line"><span class="beast-stat-label">Habitat</span><span class="beast-stat-value">Basalt Yoth</span></div>
+            <div class="beast-stat-line"><span class="beast-stat-label">Behavior</span><span class="beast-stat-value">Sanity Spellcaster</span></div>
+            <div class="beast-stat-line"><span class="beast-stat-label">Weakness</span><span class="beast-stat-value">Fire Damage</span></div>
+          </div>
+        </article>
+
+        <!-- Beast 5 -->
+        <article class="card beast-card" data-habitat="nkai" data-threat="eldritch">
+          <span class="threat-level threat-eldritch">Eldritch Threat</span>
+          <h3 class="card-title">Formless Spawn</h3>
+          <p class="card-text">
+            Viscous liquid mud abominations of Tsathoggua. They flow rapidly under floor cracks and are entirely immune to standard steel spears and iron bullets.
+          </p>
+          <div style="margin-bottom: 1.5rem;">
+            <div class="beast-stat-line"><span class="beast-stat-label">Habitat</span><span class="beast-stat-value">Abyss N'kai</span></div>
+            <div class="beast-stat-line"><span class="beast-stat-label">Behavior</span><span class="beast-stat-value">Liquid Stalker</span></div>
+            <div class="beast-stat-line"><span class="beast-stat-label">Weakness</span><span class="beast-stat-value">Biolume Lantern Beam</span></div>
+          </div>
+        </article>
+
+        <!-- Beast 6 -->
+        <article class="card beast-card" data-habitat="jungle" data-threat="medium">
+          <span class="threat-level threat-medium">Medium Threat</span>
+          <h3 class="card-title">Cursed Jungle Stalker</h3>
+          <p class="card-text">
+            Four-legged panther-like beasts with sensory whiskers. They scale trees, waiting for players with fractured sanity before pouncing from the canopy.
+          </p>
+          <div style="margin-bottom: 1.5rem;">
+            <div class="beast-stat-line"><span class="beast-stat-label">Habitat</span><span class="beast-stat-value">Surface Jungle</span></div>
+            <div class="beast-stat-line"><span class="beast-stat-label">Behavior</span><span class="beast-stat-value">Ambush Predator</span></div>
+            <div class="beast-stat-line"><span class="beast-stat-label">Weakness</span><span class="beast-stat-value">Fire & Smoke Bombs</span></div>
+          </div>
+        </article>
+
+        <!-- Beast 7 -->
+        <article class="card beast-card card-purple" data-habitat="kn-yan" data-threat="medium">
+          <span class="threat-level threat-medium">Medium Threat</span>
+          <h3 class="card-title">Subterranean Deep One</h3>
+          <p class="card-text">
+            Fish-like humanoids that nest inside the toxic canals of K'n-yan. They drag slow, overloaded players into deep aqueducts to drown.
+          </p>
+          <div style="margin-bottom: 1.5rem;">
+            <div class="beast-stat-line"><span class="beast-stat-label">Habitat</span><span class="beast-stat-value">Red K'n-yan</span></div>
+            <div class="beast-stat-line"><span class="beast-stat-label">Behavior</span><span class="beast-stat-value">Aquatic Ambusher</span></div>
+            <div class="beast-stat-line"><span class="beast-stat-label">Weakness</span><span class="beast-stat-value">Electric Darts</span></div>
+          </div>
+        </article>
+
+        <!-- Beast 8 -->
+        <article class="card beast-card card-purple" data-habitat="kn-yan" data-threat="eldritch">
+          <span class="threat-level threat-eldritch">Eldritch Threat</span>
+          <h3 class="card-title">Star-Spawn Sentry</h3>
+          <p class="card-text">
+            Coloseal octopoid watchers floating inside the great domed columns. Staring at them triggers absolute insanity, warping the player's controls and movements.
+          </p>
+          <div style="margin-bottom: 1.5rem;">
+            <div class="beast-stat-line"><span class="beast-stat-label">Habitat</span><span class="beast-stat-value">Red K'n-yan</span></div>
+            <div class="beast-stat-line"><span class="beast-stat-label">Behavior</span><span class="beast-stat-value">Cognitive Hazard</span></div>
+            <div class="beast-stat-line"><span class="beast-stat-label">Weakness</span><span class="beast-stat-value">Stealth (Smoke Veil)</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer" id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">THE MOUND<span>: OOM</span></div>
+          <p class="footer-desc">
+            The ultimate fan-built guide and database for The Mound: Omen of Cthulhu. Developed to assist all explorers of the cold cognitive deep.
+          </p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Database</h4>
+          <ul class="footer-links">
+            <li><a href="bestiary.html" class="footer-link">Creature Bestiary</a></li>
+            <li><a href="equipment.html" class="footer-link">Equipment Database</a></li>
+            <li><a href="calculator.html" class="footer-link">Expedition Planner</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul class="footer-links">
+            <li><a href="guides.html" class="footer-link">Survival Guides</a></li>
+            <li><a href="lore.html" class="footer-link">Mythos & Lore</a></li>
+            <li><a href="https://store.steampowered.com" class="footer-link" target="_blank">Steam Store</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Site & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="privacy.html#terms" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Mound: Omen of Cthulhu Fan Wiki. All rights reserved. Game content and materials are trademarks of ACE Team / Nacon.</p>
+        <p>Designed by <a href="#" style="color: var(--primary-glow);">Antigravity</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" id="btn-back-to-top" aria-label="Back to top">▲</button>
+
+  <script src="../js/main.js"></script>
+
+  <!-- INTERACTIVE FILTERING SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const habitatButtons = document.querySelectorAll('#habitat-filters .filter-btn');
+      const threatButtons = document.querySelectorAll('#threat-filters .filter-btn');
+      const beastCards = document.querySelectorAll('.beast-card');
+
+      let activeHabitat = 'all';
+      let activeThreat = 'all';
+
+      const filterBeasts = () => {
+        beastCards.forEach(card => {
+          const cardHabitat = card.getAttribute('data-habitat');
+          const cardThreat = card.getAttribute('data-threat');
+
+          const habitatMatch = activeHabitat === 'all' || cardHabitat === activeHabitat;
+          const threatMatch = activeThreat === 'all' || cardThreat === activeThreat;
+
+          if (habitatMatch && threatMatch) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      };
+
+      habitatButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          habitatButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeHabitat = btn.getAttribute('data-habitat');
+          filterBeasts();
+        });
+      });
+
+      threatButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          threatButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeThreat = btn.getAttribute('data-threat');
+          filterBeasts();
+        });
+      });
+    });
+  </script>
+</body>
+</html>

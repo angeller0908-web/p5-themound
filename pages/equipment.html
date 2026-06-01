@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse the complete equipment database for The Mound: Omen of Cthulhu. Weapons, tools, medical supplies, and optimal loadout recommendations for every team size.">
+  <meta name="keywords" content="The Mound equipment database, weapons, light sources, loadouts, survival tools, Toledo sword, Zamacona map">
+  <meta name="author" content="Antigravity Web Designs">
+  
+  <title>Equipment Database & Loadouts — The Mound: Omen of Cthulhu</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://themound.online/pages/equipment.html">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://themound.online/pages/equipment.html">
+  <meta property="og:title" content="Equipment Database & Loadouts — The Mound: Omen of Cthulhu">
+  <meta property="og:description" content="Browse the complete equipment database for The Mound: Omen of Cthulhu. Weapons, tools, medical supplies, and optimal loadout recommendations for every team size.">
+  <meta property="og:image" content="https://themound.online/images/ox-cart-escort.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Equipment Database & Loadouts — The Mound: Omen of Cthulhu">
+  <meta property="twitter:description" content="Weapons, tools, medical supplies, and optimal loadouts for every team size in The Mound.">
+  <meta property="twitter:image" content="https://themound.online/images/ox-cart-escort.png">
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Structured Data: Breadcrumb + CollectionPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://themound.online/" },
+          { "@type": "ListItem", "position": 2, "name": "Equipment DB", "item": "https://themound.online/pages/equipment.html" }
+        ]
+      },
+      {
+        "@type": "CollectionPage",
+        "name": "Equipment Database & Loadouts — The Mound: Omen of Cthulhu",
+        "description": "The complete equipment database for The Mound: Omen of Cthulhu, covering weapons, tools, medical supplies, and optimal loadout recommendations for every team size.",
+        "image": "https://themound.online/images/ox-cart-escort.png",
+        "inLanguage": "en",
+        "about": { "@type": "VideoGame", "name": "The Mound: Omen of Cthulhu" }
+      }
+    ]
+  }
+  </script>
+  <style>
+    .loadout-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--border-radius-md);
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .loadout-item-list {
+      list-style-type: square;
+      margin-left: 1.5rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER / STICKY NAVIGATION
+       ========================================================================== -->
+  <header class="header" id="main-header">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo" id="nav-logo">
+        THE MOUND<span>: OMEN OF CTHULHU</span>
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li class="nav-item"><a href="../index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li class="nav-item"><a href="articles/index.html" class="nav-link" id="nav-news">News</a></li>
+          <li class="nav-item"><a href="guides.html" class="nav-link" id="nav-guides">Guides</a></li>
+          <li class="nav-item"><a href="lore.html" class="nav-link" id="nav-lore">Lore</a></li>
+          <li class="nav-item"><a href="bestiary.html" class="nav-link" id="nav-bestiary">Bestiary</a></li>
+          <li class="nav-item"><a href="equipment.html" class="nav-link active" id="nav-equipment">Equipment</a></li>
+          <li class="nav-item"><a href="calculator.html" class="nav-link" id="nav-calculator">Planner</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="nav-hamburger-toggle" aria-label="Toggle mobile menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SUB HERO SECTION
+       ========================================================================== -->
+  <section class="sub-hero" id="equipment-hero">
+    <div class="sub-hero-bg" style="background-image: url('../images/galleon-ship.png');"></div>
+    <div class="sub-hero-overlay"></div>
+    <div class="container sub-hero-content">
+      <h1 class="sub-hero-title">EQUIPMENT DATABASE</h1>
+      <p class="sub-hero-desc">
+        A catalog of Spanish military weapons, navigational equipment, medical supplies, and ancient bioluminescent devices. Prepare your loadout wisely before descending.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       DATABASE SECTION
+       ========================================================================== -->
+  <section style="padding-top: 4rem;">
+    <div class="container">
+      
+      <!-- Interactive Search Box -->
+      <div class="search-box">
+        <input type="text" id="equipment-search" placeholder="Search equipment by name or description..." class="search-input" aria-label="Search equipment">
+      </div>
+
+      <!-- Categories Filter Buttons -->
+      <div class="filter-container" id="category-filters" style="margin-bottom: 3rem;">
+        <button class="filter-btn active" data-category="all">All Items</button>
+        <button class="filter-btn" data-category="weapons">Weapons</button>
+        <button class="filter-btn" data-category="light">Light Sources</button>
+        <button class="filter-btn" data-category="tools">Exploration Tools</button>
+        <button class="filter-btn" data-category="medical">Medical Supplies</button>
+        <button class="filter-btn" data-category="nav">Navigation</button>
+      </div>
+
+      <!-- Database Table -->
+      <div class="table-responsive">
+        <table class="table" id="equipment-table">
+          <thead>
+            <tr>
+              <th>Item Name</th>
+              <th>Category</th>
+              <th>Weight (kg)</th>
+              <th>Sanity Protection</th>
+              <th>Tactical Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 18 Items -->
+            <tr class="eq-row" data-category="weapons">
+              <td style="font-weight: 700; color: var(--text-highlight);">Arquebus of Coronado</td>
+              <td>Weapon</td>
+              <td>8.5 kg</td>
+              <td>0%</td>
+              <td>Heavy 16th-century matchlock firearm. Deals massive kinetic damage. Easily stuns Gug giants but requires a 6-second stationary reload.</td>
+            </tr>
+            <tr class="eq-row" data-category="weapons">
+              <td style="font-weight: 700; color: var(--text-highlight);">Toledo Steel Halberd</td>
+              <td>Weapon</td>
+              <td>4.2 kg</td>
+              <td>5%</td>
+              <td>Polearm offering excellent melee range. Allows sweeping slashes that can hit multiple blind Y'm-bhi dead at once.</td>
+            </tr>
+            <tr class="eq-row" data-category="weapons">
+              <td style="font-weight: 700; color: var(--text-highlight);">Officer Toledo Sword</td>
+              <td>Weapon</td>
+              <td>1.8 kg</td>
+              <td>5%</td>
+              <td>Lightweight slashing weapon. Consumes minimal stamina, allowing rapid strikes. Perfect for nimble scout builds.</td>
+            </tr>
+            <tr class="eq-row" data-category="weapons">
+              <td style="font-weight: 700; color: var(--text-highlight);">Matchlock Pistol</td>
+              <td>Weapon</td>
+              <td>2.5 kg</td>
+              <td>0%</td>
+              <td>Compact secondary firearm. Deals high damage at short range. Quick to draw when ambushed, but generates heavy noise.</td>
+            </tr>
+            <tr class="eq-row" data-category="weapons">
+              <td style="font-weight: 700; color: var(--text-highlight);">Crossbow of Zamacona</td>
+              <td>Weapon</td>
+              <td>3.5 kg</td>
+              <td>0%</td>
+              <td>A modified steel crossbow. Fires heavy bolts. Completely silent operation—allows sniping sentries without alerting nearby packs.</td>
+            </tr>
+            <tr class="eq-row" data-category="weapons">
+              <td style="font-weight: 700; color: var(--text-highlight);">Obsidian Macuahuitl</td>
+              <td>Weapon</td>
+              <td>2.2 kg</td>
+              <td>0%</td>
+              <td>Aztec-style club lined with volcanic obsidian blades. Deals high bleeding damage but has low durability against stone armor.</td>
+            </tr>
+            <tr class="eq-row" data-category="light">
+              <td style="font-weight: 700; color: var(--primary-glow);">Lantern of K'n-yan</td>
+              <td>Light Source</td>
+              <td>2.0 kg</td>
+              <td>30%</td>
+              <td>Subterranean lamp fueled by glowing red lichen extract. Decreases sanity decay rate of all squad members within 6 meters.</td>
+            </tr>
+            <tr class="eq-row" data-category="light">
+              <td style="font-weight: 700; color: var(--primary-glow);">Spanish Iron Torches</td>
+              <td>Light Source</td>
+              <td>0.8 kg</td>
+              <td>10%</td>
+              <td>Standard pitch-soaked torch. Cheap and light. Can be thrown onto ground to illuminate dark corridors permanently. Burns for 5 minutes.</td>
+            </tr>
+            <tr class="eq-row" data-category="light">
+              <td style="font-weight: 700; color: var(--primary-glow);">Photic Focus Lamp</td>
+              <td>Light Source</td>
+              <td>3.0 kg</td>
+              <td>15%</td>
+              <td>Heavy spotlight that fires a condensed blue biolume beam. Direct hits will temporarily blind and freeze Formless Spawn.</td>
+            </tr>
+            <tr class="eq-row" data-category="light">
+              <td style="font-weight: 700; color: var(--primary-glow);">Cthulhian Astral Lens</td>
+              <td>Light Source</td>
+              <td>4.0 kg</td>
+              <td>50%</td>
+              <td>An ancient, heavy lens that projects purple void light. Reveals hidden pathways, invisible murals, and subterranean gravity traps.</td>
+            </tr>
+            <tr class="eq-row" data-category="nav">
+              <td style="font-weight: 700; color: var(--text-highlight);">Magnetic Brass Compass</td>
+              <td>Navigation</td>
+              <td>0.2 kg</td>
+              <td>0%</td>
+              <td>Navigational compass. In K'n-yan, it points toward active extraction gateway mounds instead of magnetic north.</td>
+            </tr>
+            <tr class="eq-row" data-category="nav">
+              <td style="font-weight: 700; color: var(--text-highlight);">Map of Zamacona</td>
+              <td>Navigation</td>
+              <td>0.1 kg</td>
+              <td>0%</td>
+              <td>Historical parchment outlining level boundaries. Reveals the location of ancient safe-zones and botanical lichen chambers.</td>
+            </tr>
+            <tr class="eq-row" data-category="tools">
+              <td style="font-weight: 700; color: var(--text-highlight);">Sound Decoy Bells</td>
+              <td>Exploration Tool</td>
+              <td>0.5 kg</td>
+              <td>0%</td>
+              <td>Throw-able bells. Emits ringing noises upon landing, drawing the blind Y'm-bhi away from crucial doors or chest locations.</td>
+            </tr>
+            <tr class="eq-row" data-category="tools">
+              <td style="font-weight: 700; color: var(--text-highlight);">Spanish Steel Trap</td>
+              <td>Exploration Tool</td>
+              <td>3.2 kg</td>
+              <td>0%</td>
+              <td>Heavy spring trap. Stops charging Gugs and Stalkers in their tracks, dealing moderate damage and locking them for 8 seconds.</td>
+            </tr>
+            <tr class="eq-row" data-category="medical">
+              <td style="font-weight: 700; color: var(--text-highlight);">Biolume Sedative Vials</td>
+              <td>Medical</td>
+              <td>0.2 kg</td>
+              <td>0%</td>
+              <td>Crushed sedative flowers in spring water. Restores 25 Sanity points instantly, clearing minor audio hallucinations.</td>
+            </tr>
+            <tr class="eq-row" data-category="medical">
+              <td style="font-weight: 700; color: var(--text-highlight);">Cinnabar Elixir</td>
+              <td>Medical</td>
+              <td>0.3 kg</td>
+              <td>0%</td>
+              <td>A rich, red alchemical oil. Restores 40 Health points over a 10-second duration. Breaks if the player takes damage during use.</td>
+            </tr>
+            <tr class="eq-row" data-category="medical">
+              <td style="font-weight: 700; color: var(--text-highlight);">Laudanum Dropper</td>
+              <td>Medical</td>
+              <td>0.2 kg</td>
+              <td>80%</td>
+              <td>Highly potent narcotic. Completely stops sanity decay for 120 seconds. Side-effect: blurs the edges of screen.</td>
+            </tr>
+            <tr class="eq-row" data-category="medical">
+              <td style="font-weight: 700; color: var(--text-highlight);">Aromatic Smelling Salts</td>
+              <td>Medical</td>
+              <td>0.1 kg</td>
+              <td>0%</td>
+              <td>pungent crystal tube. Can be crushed near an unconscious or fully insane teammate to revive them to active duty instantly.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       RECOMMENDED CO-OP LOADOUTS
+       ========================================================================== -->
+  <section style="background-color: var(--bg-dark-abyss);" id="loadouts">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 3rem;">
+        <h2>RECOMMENDED SQUAD LOADOUTS</h2>
+        <p style="color: var(--text-secondary);">Synergize your gear setup based on your group size to maximize extraction ratios.</p>
+      </div>
+
+      <div class="grid">
+        <!-- 2-Player Loadout -->
+        <div class="card animate-fade-in">
+          <h3 class="card-title">Duo Scavengers (2 Players)</h3>
+          <p class="card-text" style="font-size: 0.9rem;">Perfect for quick, quiet surface and red-vault relic runs. Emphasizes stealth and speed.</p>
+          <div class="loadout-card">
+            <h4 style="font-size: 0.85rem; color: var(--primary-glow); margin-bottom: 0.5rem;">PLAYER 1 (Point Scout):</h4>
+            <ul class="loadout-item-list">
+              <li>Officer Toledo Sword</li>
+              <li>Crossbow of Zamacona</li>
+              <li>Magnetic Brass Compass</li>
+              <li>Biolume Sedatives</li>
+            </ul>
+            <h4 style="font-size: 0.85rem; color: var(--primary-glow); margin-top: 1rem; margin-bottom: 0.5rem;">PLAYER 2 (Support Light):</h4>
+            <ul class="loadout-item-list">
+              <li>Lantern of K'n-yan</li>
+              <li>Toledo Steel Halberd</li>
+              <li>Sound Decoy Bells (x3)</li>
+              <li>Cinnabar Elixir (x2)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3-Player Loadout -->
+        <div class="card card-purple animate-fade-in">
+          <h3 class="card-title">Ruin Infiltrators (3 Players)</h3>
+          <p class="card-text" style="font-size: 0.9rem;">Balanced setup designed to breach level 2 Yoth basalt chambers safely.</p>
+          <div class="loadout-card">
+            <h4 style="font-size: 0.85rem; color: var(--accent-void-purple); margin-bottom: 0.5rem;">PLAYER 1 (Breacher):</h4>
+            <ul class="loadout-item-list">
+              <li>Arquebus of Coronado</li>
+              <li>Matchlock Pistol</li>
+              <li>Spanish Steel Trap</li>
+            </ul>
+            <h4 style="font-size: 0.85rem; color: var(--accent-void-purple); margin-top: 1rem; margin-bottom: 0.5rem;">PLAYER 2 (Lantern Guard):</h4>
+            <ul class="loadout-item-list">
+              <li>Lantern of K'n-yan</li>
+              <li>Toledo Steel Halberd</li>
+              <li>Laudanum Dropper (x2)</li>
+            </ul>
+            <h4 style="font-size: 0.85rem; color: var(--accent-void-purple); margin-top: 1rem; margin-bottom: 0.5rem;">PLAYER 3 (Navigator):</h4>
+            <ul class="loadout-item-list">
+              <li>Photic Focus Lamp</li>
+              <li>Officer Toledo Sword</li>
+              <li>Map & Compass Combo</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4-Player Loadout -->
+        <div class="card animate-fade-in">
+          <h3 class="card-title">Expedition Vanguard (4 Players)</h3>
+          <p class="card-text" style="font-size: 0.9rem;">Maximum safety for entering N'kai. Heavy defensive firepower and utility.</p>
+          <div class="loadout-card" style="padding: 1rem;">
+            <h4 style="font-size: 0.8rem; color: var(--primary-glow); margin-bottom: 0.25rem;">PLAYER 1: Heavy Fire Support</h4>
+            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Arquebus + Toledo Sword + Steel Trap</p>
+            <h4 style="font-size: 0.8rem; color: var(--primary-glow); margin-bottom: 0.25rem;">PLAYER 2: Sanity Guardian</h4>
+            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Cthulhian Astral Lens + Laudanum + Salts</p>
+            <h4 style="font-size: 0.8rem; color: var(--primary-glow); margin-bottom: 0.25rem;">PLAYER 3: Tactical Scout</h4>
+            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Crossbow + Decoy Bells + Compass</p>
+            <h4 style="font-size: 0.8rem; color: var(--primary-glow); margin-bottom: 0.25rem;">PLAYER 4: Frontline Vanguard</h4>
+            <p style="font-size: 0.75rem; color: var(--text-secondary);">Steel Halberd + Focus Lamp + Cinnabar Elixir</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer" id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">THE MOUND<span>: OOM</span></div>
+          <p class="footer-desc">
+            The ultimate fan-built guide and database for The Mound: Omen of Cthulhu. Developed to assist all explorers of the cold cognitive deep.
+          </p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Database</h4>
+          <ul class="footer-links">
+            <li><a href="bestiary.html" class="footer-link">Creature Bestiary</a></li>
+            <li><a href="equipment.html" class="footer-link">Equipment Database</a></li>
+            <li><a href="calculator.html" class="footer-link">Expedition Planner</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul class="footer-links">
+            <li><a href="guides.html" class="footer-link">Survival Guides</a></li>
+            <li><a href="lore.html" class="footer-link">Mythos & Lore</a></li>
+            <li><a href="https://store.steampowered.com" class="footer-link" target="_blank">Steam Store</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Site & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="privacy.html#terms" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Mound: Omen of Cthulhu Fan Wiki. All rights reserved. Game content and materials are trademarks of ACE Team / Nacon.</p>
+        <p>Designed by <a href="#" style="color: var(--primary-glow);">Antigravity</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" id="btn-back-to-top" aria-label="Back to top">▲</button>
+
+  <script src="../js/main.js"></script>
+
+  <!-- INTERACTIVE DATABASE SEARCH & FILTER SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('equipment-search');
+      const filterButtons = document.querySelectorAll('#category-filters .filter-btn');
+      const tableRows = document.querySelectorAll('.eq-row');
+
+      let activeCategory = 'all';
+      let searchQuery = '';
+
+      const filterTable = () => {
+        tableRows.forEach(row => {
+          const rowCategory = row.getAttribute('data-category');
+          const rowText = row.innerText.toLowerCase();
+
+          const categoryMatch = activeCategory === 'all' || rowCategory === activeCategory;
+          const searchMatch = searchQuery === '' || rowText.includes(searchQuery);
+
+          if (categoryMatch && searchMatch) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      };
+
+      // Search event listener
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.toLowerCase().trim();
+        filterTable();
+      });
+
+      // Filter buttons event listener
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeCategory = btn.getAttribute('data-category');
+          filterTable();
+        });
+      });
+    });
+  </script>
+</body>
+</html>

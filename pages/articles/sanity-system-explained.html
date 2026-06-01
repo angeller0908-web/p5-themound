@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How the sanity system works in The Mound: Omen of Cthulhu. Madness distorts reality differently for each player — teammates look like monsters, paths vanish, and voice chat becomes a survival tool.">
+  <meta name="keywords" content="The Mound sanity system, the mound madness mechanic, the mound hallucinations, the mound psychological horror, how sanity works the mound">
+  <meta name="author" content="The Mound Fan Wiki Editors">
+
+  <title>The Sanity System in The Mound: How Madness Mechanics Work</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://themound.online/pages/articles/sanity-system-explained.html">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="apple-touch-icon" href="../../favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://themound.online/pages/articles/sanity-system-explained.html">
+  <meta property="og:title" content="The Sanity System in The Mound: How Madness Mechanics Work">
+  <meta property="og:description" content="Madness distorts reality differently for each player. Here's how The Mound's sanity system works and how to manage it.">
+  <meta property="og:image" content="https://themound.online/images/sanity-system.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="The Sanity System in The Mound Explained">
+  <meta property="twitter:description" content="How madness distorts reality per player — and how to survive it.">
+  <meta property="twitter:image" content="https://themound.online/images/sanity-system.png">
+
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .article-body { max-width: 800px; margin: 0 auto; }
+    .article-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 1.5rem; }
+    .article-body h2 { font-size: 1.6rem; margin-top: 2.75rem; margin-bottom: 1rem; }
+    .article-body h3 { font-size: 1.2rem; margin-top: 1.75rem; margin-bottom: 0.6rem; color: var(--primary-glow); }
+    .article-body p { color: var(--text-secondary); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.02rem; }
+    .article-body ul { color: var(--text-secondary); line-height: 1.85; margin: 0 0 1.5rem 1.3rem; }
+    .article-body li { margin-bottom: 0.6rem; }
+    .article-body a { color: var(--primary-glow); }
+    .key-facts { background: rgba(0,255,204,0.05); border: 1px solid rgba(0,255,204,0.2); border-radius: 10px; padding: 1.5rem 1.75rem; margin: 0 0 2.5rem; }
+    .key-facts h2 { margin-top: 0; font-size: 1.15rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--primary-glow); }
+    .key-facts table { width: 100%; border-collapse: collapse; }
+    .key-facts td { padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); vertical-align: top; color: var(--text-secondary); }
+    .key-facts td:first-child { font-weight: 600; color: var(--text-primary); width: 38%; }
+    .breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; }
+    .breadcrumbs a { color: var(--text-secondary); }
+    .note { font-size: 0.9rem; color: var(--text-muted); font-style: italic; border-left: 3px solid var(--secondary-glow, #7a00ff); padding-left: 1rem; margin: 2rem 0; }
+    .faq h3 { color: var(--text-primary); }
+  </style>
+
+  <!-- Structured Data: Breadcrumb + Article + FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://themound.online/" },
+          { "@type": "ListItem", "position": 2, "name": "News & Guides", "item": "https://themound.online/pages/articles/index.html" },
+          { "@type": "ListItem", "position": 3, "name": "Sanity System Explained", "item": "https://themound.online/pages/articles/sanity-system-explained.html" }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "The Sanity System in The Mound: How Madness Mechanics Work",
+        "description": "An explainer of the per-player sanity system in The Mound: Omen of Cthulhu, what drains it, what it does, and how to manage it.",
+        "image": "https://themound.online/images/sanity-system.png",
+        "datePublished": "2026-06-01",
+        "dateModified": "2026-06-01",
+        "inLanguage": "en",
+        "author": { "@type": "Organization", "name": "The Mound Fan Wiki" },
+        "publisher": { "@type": "Organization", "name": "The Mound Fan Wiki" },
+        "about": { "@type": "VideoGame", "name": "The Mound: Omen of Cthulhu" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does the sanity system work in The Mound: Omen of Cthulhu?",
+            "acceptedAnswer": { "@type": "Answer", "text": "As a player's sanity falls, the game distorts their perception of reality — and it does so individually for each player. Paths can disappear, phenomena appear, and teammates can look like monsters, which makes voice communication essential to tell illusion from reality." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can teammates really look like monsters in The Mound?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. A key part of the sanity system is that low sanity can make your own teammates appear as enemies, creating paranoia and the risk of attacking a friend, so squads rely on voice chat to confirm what's real." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- HEADER / STICKY NAVIGATION -->
+  <header class="header" id="main-header">
+    <div class="container nav-container">
+      <a href="../../index.html" class="logo" id="nav-logo">
+        THE MOUND<span>: OMEN OF CTHULHU</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li class="nav-item"><a href="../../index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link active" id="nav-news">News</a></li>
+          <li class="nav-item"><a href="../guides.html" class="nav-link" id="nav-guides">Guides</a></li>
+          <li class="nav-item"><a href="../lore.html" class="nav-link" id="nav-lore">Lore</a></li>
+          <li class="nav-item"><a href="../bestiary.html" class="nav-link" id="nav-bestiary">Bestiary</a></li>
+          <li class="nav-item"><a href="../equipment.html" class="nav-link" id="nav-equipment">Equipment</a></li>
+          <li class="nav-item"><a href="../calculator.html" class="nav-link" id="nav-calculator">Planner</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="nav-hamburger-toggle" aria-label="Toggle mobile menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SUB HERO -->
+  <section class="sub-hero" id="article-hero">
+    <div class="sub-hero-bg" style="background-image: url('../../images/sanity-system.png');"></div>
+    <div class="sub-hero-overlay"></div>
+    <div class="container sub-hero-content">
+      <h1 class="sub-hero-title" style="font-size: 2.4rem;">The Sanity System Explained</h1>
+      <p class="sub-hero-desc">The Mound's signature mechanic doesn't just scare you — it makes you doubt everything, including your own squad.</p>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section style="padding-top: 3rem;">
+    <div class="container">
+      <article class="article-body animate-fade-in">
+
+        <div class="breadcrumbs">
+          <a href="../../index.html">Home</a> › <a href="index.html">News &amp; Guides</a> › Sanity System Explained
+        </div>
+
+        <div class="article-meta">
+          📅 Published June 1, 2026 · Last updated June 1, 2026 · By The Mound Fan Wiki Editors · ~6 min read
+        </div>
+
+        <div class="key-facts">
+          <h2>The Quick Answer</h2>
+          <table>
+            <tr><td>What it is</td><td>A madness meter that distorts your perception</td></tr>
+            <tr><td>Key twist</td><td>Hallucinations are per-player, not shared</td></tr>
+            <tr><td>Worst effect</td><td>Teammates can appear as monsters</td></tr>
+            <tr><td>Your defense</td><td>Voice chat + staying together</td></tr>
+            <tr><td>Why it matters</td><td>It's the mechanic the whole game is built on</td></tr>
+          </table>
+        </div>
+
+        <p>
+          Plenty of horror games have a sanity meter. The Mound: Omen of Cthulhu does something meaner with it. Instead of a shared spook effect, your madness is <em>private</em> — what you see when you're losing your mind isn't what your teammates see. That single design choice is what turns this from "another co-op horror game" into something genuinely unnerving. Here's how it works.
+        </p>
+
+        <h2>What is sanity in The Mound?</h2>
+        <p>
+          Sanity represents your explorer's grip on reality. Drawn straight from Lovecraft's cosmic horror — where simply perceiving the truth of the universe breaks the human mind — it's a resource you manage just like health. The difference is that running out of sanity doesn't kill you outright. It does something worse: it makes you unable to trust what you're looking at.
+        </p>
+
+        <h2>What drains your sanity?</h2>
+        <p>
+          Based on the trailers and gameplay showcase, sanity erodes from the things you'd expect in a place like this:
+        </p>
+        <ul>
+          <li><strong>Darkness</strong> — time spent without light wears on the mind.</li>
+          <li><strong>Encounters</strong> — witnessing creatures and unexplained phenomena.</li>
+          <li><strong>The deep itself</strong> — supernatural forces in the ruins actively test and distort your senses.</li>
+          <li><strong>Time</strong> — the longer the expedition runs, the heavier the toll.</li>
+        </ul>
+
+        <h2>The twist: madness is personal</h2>
+        <p>
+          This is the part that makes The Mound special. As your sanity falls, the game lies to <em>you specifically</em>. Paths you walked down can vanish. Phenomena appear that aren't there. And most dangerously, <strong>your own teammates can start to look like monsters</strong>. Because each player's hallucinations are different, you can't just glance at a friend's screen to check — the deep is sowing doubt and paranoia through the whole group, one mind at a time.
+        </p>
+        <p>
+          The horror, then, isn't only "there's a creature." It's "my friend is screaming about a creature and I see nothing" — or worse, "the monster in front of me might actually be my teammate." That ambiguity is the engine of the entire experience.
+        </p>
+
+        <div class="note">
+          Exact numbers — how fast sanity drains, the precise thresholds where effects kick in, whether there's a friendly-fire penalty — aren't confirmed before launch. The behavior above is drawn from official trailers, the gameplay showcase, and developer comments. We'll add tested specifics once the game is out.
+        </div>
+
+        <h2>How to manage your sanity</h2>
+        <p>
+          Until we can test exact mechanics, the smart approach follows directly from how the system is described:
+        </p>
+        <ul>
+          <li><strong>Talk constantly.</strong> Voice chat is your reality check. Call out what you see and confirm it with the group before acting — especially before shooting anything that looks human.</li>
+          <li><strong>Stay in the light.</strong> Managing light sources appears central to keeping sanity stable. Assign a light-bearer and don't drift into the dark alone.</li>
+          <li><strong>Stick together.</strong> An isolated, low-sanity player is the most dangerous thing in the room — to themselves and to you.</li>
+          <li><strong>Don't linger.</strong> Since time deepens the madness, efficient runs are safer runs. Greed costs sanity. Plan your route with the <a href="../calculator.html">expedition planner</a>.</li>
+        </ul>
+
+        <h2>How it compares to other horror games</h2>
+        <p>
+          You might know sanity systems from <em>Amnesia</em> (darkness and monster sightings sap your mind) or the dread meters of games like <em>Phasmophobia</em> and <em>Darkest Dungeon</em>. The Mound's spin is the <strong>per-player, co-op-breaking</strong> nature of it: where most sanity systems make <em>you</em> doubt the game, The Mound makes you doubt <em>each other</em>. That's a fresh idea in the space, and it's why the mechanic has drawn so much attention. We compare its overall design to other co-op horror in our <a href="vs-gtfo-lethal-company-darktide.html">The Mound vs GTFO vs Lethal Company</a> breakdown.
+        </p>
+
+        <!-- FAQ -->
+        <div class="faq">
+          <h2>FAQ</h2>
+          <h3>Does low sanity kill you in The Mound?</h3>
+          <p>It's not a direct death meter like health. Instead it distorts your perception — but those hallucinations can easily get you killed, for example by making you misjudge a threat or attack a teammate.</p>
+
+          <h3>Do all players share the same hallucinations?</h3>
+          <p>No — that's the key twist. Hallucinations are individual, so each player sees a different distorted version of reality, which is why voice communication is so important.</p>
+
+          <h3>How do you restore sanity?</h3>
+          <p>Exact recovery methods aren't confirmed yet, but light, staying with your squad, and avoiding prolonged exposure to the deep all appear to help. We'll update with confirmed details at launch.</p>
+        </div>
+
+        <p style="margin-top: 2.5rem;">
+          The sanity system is the heart of the game — build your whole strategy around it. Next, learn the threats that exploit it in our <a href="creatures-confirmed-preview.html">confirmed creatures preview</a> and the full <a href="../bestiary.html">bestiary</a>, or get the fundamentals in our <a href="beginners-guide-10-things.html">beginner's guide</a>.
+        </p>
+
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">THE MOUND<span>: OOM</span></div>
+          <p class="footer-desc">
+            The ultimate fan-built guide and database for The Mound: Omen of Cthulhu. Developed to assist all explorers of the cold cognitive deep.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Database</h4>
+          <ul class="footer-links">
+            <li><a href="../bestiary.html" class="footer-link">Creature Bestiary</a></li>
+            <li><a href="../equipment.html" class="footer-link">Equipment Database</a></li>
+            <li><a href="../calculator.html" class="footer-link">Expedition Planner</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Site & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html" class="footer-link">About Us</a></li>
+            <li><a href="../contact.html" class="footer-link">Contact</a></li>
+            <li><a href="../privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="../privacy.html#terms" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul class="footer-links">
+            <li><a href="../guides.html" class="footer-link">Survival Guides</a></li>
+            <li><a href="../lore.html" class="footer-link">Mythos & Lore</a></li>
+            <li><a href="https://store.steampowered.com/app/2569760/The_Mound_Omen_of_Cthulhu/" class="footer-link" target="_blank">Steam Store</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Mound: Omen of Cthulhu Fan Wiki. All rights reserved. Game content and materials are trademarks of ACE Team / Nacon.</p>
+        <p>Designed by <a href="#" style="color: var(--primary-glow);">Antigravity</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="btn-back-to-top" aria-label="Back to top">▲</button>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>

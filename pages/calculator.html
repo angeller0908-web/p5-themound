@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plan your expedition in The Mound: Omen of Cthulhu. Estimate sanity drain rates, optimize equipment weight, and predict extraction success rates.">
+  <meta name="keywords" content="The Mound expedition planner, sanity calculator, weight calculator, extraction success calculator, co-op planner">
+  <meta name="author" content="Antigravity Web Designs">
+  
+  <title>Expedition Planner & Calculator — The Mound: Omen of Cthulhu</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://themound.online/pages/calculator.html">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://themound.online/pages/calculator.html">
+  <meta property="og:title" content="Expedition Planner & Calculator — The Mound: Omen of Cthulhu">
+  <meta property="og:description" content="Plan your expedition in The Mound: Omen of Cthulhu. Estimate sanity drain rates, optimize equipment weight, and predict extraction success rates.">
+  <meta property="og:image" content="https://themound.online/images/sanity-system.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Expedition Planner & Calculator — The Mound: Omen of Cthulhu">
+  <meta property="twitter:description" content="Estimate sanity drain, optimize equipment weight, and predict extraction success for The Mound.">
+  <meta property="twitter:image" content="https://themound.online/images/sanity-system.png">
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Structured Data: Breadcrumb + WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://themound.online/" },
+          { "@type": "ListItem", "position": 2, "name": "Expedition Planner", "item": "https://themound.online/pages/calculator.html" }
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Expedition Planner & Calculator — The Mound: Omen of Cthulhu",
+        "description": "An interactive expedition planner for The Mound: Omen of Cthulhu that estimates sanity drain rates, optimizes equipment weight, and predicts extraction success rates.",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Web Browser",
+        "image": "https://themound.online/images/sanity-system.png",
+        "inLanguage": "en",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      }
+    ]
+  }
+  </script>
+  <style>
+    .calc-section {
+      background: var(--bg-card);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--border-radius-lg);
+      padding: 3rem 2.5rem;
+      margin-bottom: 5rem;
+      box-shadow: var(--shadow-eldritch);
+    }
+    
+    .calc-section-title {
+      border-bottom: 1px solid rgba(0, 255, 204, 0.1);
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+      color: var(--primary-glow);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER / STICKY NAVIGATION
+       ========================================================================== -->
+  <header class="header" id="main-header">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo" id="nav-logo">
+        THE MOUND<span>: OMEN OF CTHULHU</span>
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li class="nav-item"><a href="../index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li class="nav-item"><a href="articles/index.html" class="nav-link" id="nav-news">News</a></li>
+          <li class="nav-item"><a href="guides.html" class="nav-link" id="nav-guides">Guides</a></li>
+          <li class="nav-item"><a href="lore.html" class="nav-link" id="nav-lore">Lore</a></li>
+          <li class="nav-item"><a href="bestiary.html" class="nav-link" id="nav-bestiary">Bestiary</a></li>
+          <li class="nav-item"><a href="equipment.html" class="nav-link" id="nav-equipment">Equipment</a></li>
+          <li class="nav-item"><a href="calculator.html" class="nav-link active" id="nav-calculator">Planner</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="nav-hamburger-toggle" aria-label="Toggle mobile menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SUB HERO SECTION
+       ========================================================================== -->
+  <section class="sub-hero" id="calc-hero">
+    <div class="sub-hero-bg" style="background-image: url('../images/sanity-system.png');"></div>
+    <div class="sub-hero-overlay"></div>
+    <div class="container sub-hero-content">
+      <h1 class="sub-hero-title">EXPEDITION PLANNER</h1>
+      <p class="sub-hero-desc">
+        Calculate sanity erosion rates, weigh your squad cargo weight penalties, and estimate extraction survival probabilities. Knowledge is the ultimate weapon against the void.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CALCULATORS WRAPPER
+       ========================================================================== -->
+  <section style="padding-top: 4rem;">
+    <div class="container">
+      
+      <!-- ==========================================================================
+           CALCULATOR 1: SANITY DRAIN CALCULATOR
+           ========================================================================== -->
+      <div class="calc-section animate-fade-in" id="calc-sanity-section">
+        <h2 class="calc-section-title">1. SANITY DRAIN CALCULATOR</h2>
+        
+        <div class="calc-container">
+          <!-- Inputs -->
+          <div class="calc-inputs">
+            
+            <div class="form-group">
+              <label for="sanity-base-slider">Current Base Sanity: <span id="sanity-base-val">100%</span></label>
+              <input type="range" id="sanity-base-slider" min="0" max="100" value="100" class="range-slider">
+            </div>
+
+            <div class="form-group">
+              <label for="sanity-squad">Squad Size (Team Proximity bonus):</label>
+              <select id="sanity-squad" class="select-input">
+                <option value="1">1 Player (Severe Loneliness Penalty)</option>
+                <option value="2">2 Players (Standard)</option>
+                <option value="3">3 Players (Safe Squad)</option>
+                <option value="4" selected>4 Players (Max Proximity Buff)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="sanity-depth">Subterranean Strata Depth:</label>
+              <select id="sanity-depth" class="select-input">
+                <option value="kn-yan" selected>Level 1: K'n-yan (Red Caverns)</option>
+                <option value="yoth">Level 2: Yoth (Basalt Caverns)</option>
+                <option value="nkai">Level 3: N'kai (The Black Abyss)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="sanity-light">Active Light Source:</label>
+              <select id="sanity-light" class="select-input">
+                <option value="none">None (Pitch Blackness)</option>
+                <option value="torch">Spanish Iron Torch</option>
+                <option value="lantern" selected>Lantern of K'n-yan (Biolume)</option>
+                <option value="lens">Cthulhian Astral Lens</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="sanity-time-slider">Estimated Raid Duration: <span id="sanity-time-val">15 Minutes</span></label>
+              <input type="range" id="sanity-time-slider" min="1" max="60" value="15" class="range-slider">
+            </div>
+
+          </div>
+
+          <!-- Results -->
+          <div class="calc-results">
+            <h4 style="color: var(--text-highlight); margin-bottom: 1.5rem; letter-spacing: 0.05em; font-family: var(--font-header);">
+              PSYCHIC FORECAST
+            </h4>
+            
+            <div style="margin-bottom: 1.5rem;">
+              <p style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Sanity Drain Rate</p>
+              <h3 style="font-size: 2.2rem; color: var(--accent-sanity-red);" id="calc-sanity-rate">1.5% / min</h3>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <p style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Sanity After Raid</p>
+              <h3 style="font-size: 2.2rem; color: var(--primary-glow);" id="calc-sanity-final">77.5%</h3>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <p style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Time to Critical Hallucination</p>
+              <p style="font-size: 1.2rem; font-weight: 700; color: var(--text-highlight);" id="calc-sanity-critical">46.7 Minutes</p>
+            </div>
+
+            <div id="sanity-verdict" style="background: rgba(255, 51, 102, 0.1); border: 1px solid var(--accent-sanity-red); padding: 1rem; border-radius: var(--border-radius-md); font-size: 0.85rem; color: var(--text-primary); margin-top: 1.5rem;">
+              STABLE MIND. Minor whispers detected but easily suppressed.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ==========================================================================
+           CALCULATOR 2: EQUIPMENT WEIGHT CALCULATOR
+           ========================================================================== -->
+      <div class="calc-section animate-fade-in" id="calc-weight-section">
+        <h2 class="calc-section-title">2. EQUIPMENT WEIGHT & MOBILITY PENALTY</h2>
+        
+        <div class="calc-container">
+          <!-- Inputs -->
+          <div class="calc-inputs">
+            <p class="card-text" style="margin-bottom: 1.5rem;">
+              Check the items you plan to equip. Heavy cargo directly slows down your movement speed, drains your stamina regeneration, and creates louder footfalls that alert blind sentinel Gugs.
+            </p>
+
+            <div class="checkbox-grid">
+              <!-- Item 1 -->
+              <label class="checkbox-item">
+                <input type="checkbox" class="weight-check" data-weight="8.5" checked>
+                <div class="checkbox-info">
+                  <span class="checkbox-name">Arquebus of Coronado</span>
+                  <span class="checkbox-weight">8.5 kg (Weapon)</span>
+                </div>
+              </label>
+
+              <!-- Item 2 -->
+              <label class="checkbox-item">
+                <input type="checkbox" class="weight-check" data-weight="4.2">
+                <div class="checkbox-info">
+                  <span class="checkbox-name">Toledo Steel Halberd</span>
+                  <span class="checkbox-weight">4.2 kg (Weapon)</span>
+                </div>
+              </label>
+
+              <!-- Item 3 -->
+              <label class="checkbox-item">
+                <input type="checkbox" class="weight-check" data-weight="1.8" checked>
+                <div class="checkbox-info">
+                  <span class="checkbox-name">Officer Toledo Sword</span>
+                  <span class="checkbox-weight">1.8 kg (Weapon)</span>
+                </div>
+              </label>
+
+              <!-- Item 4 -->
+              <label class="checkbox-item">
+                <input type="checkbox" class="weight-check" data-weight="2.0" checked>
+                <div class="checkbox-info">
+                  <span class="checkbox-name">Lantern of K'n-yan</span>
+                  <span class="checkbox-weight">2.0 kg (Light Source)</span>
+                </div>
+              </label>
+
+              <!-- Item 5 -->
+              <label class="checkbox-item">
+                <input type="checkbox" class="weight-check" data-weight="4.0">
+                <div class="checkbox-info">
+                  <span class="checkbox-name">Cthulhian Astral Lens</span>
+                  <span class="checkbox-weight">4.0 kg (Light Source)</span>
+                </div>
+              </label>
+
+              <!-- Item 6 -->
+              <label class="checkbox-item">
+                <input type="checkbox" class="weight-check" data-weight="3.2">
+                <div class="checkbox-info">
+                  <span class="checkbox-name">Spanish Steel Trap</span>
+                  <span class="checkbox-weight">3.2 kg (Exploration Tool)</span>
+                </div>
+              </label>
+
+              <!-- Item 7 -->
+              <label class="checkbox-item">
+                <input type="checkbox" class="weight-check" data-weight="0.2" checked>
+                <div class="checkbox-info">
+                  <span class="checkbox-name">Biolume Sedatives</span>
+                  <span class="checkbox-weight">0.2 kg (Medical)</span>
+                </div>
+              </label>
+
+              <!-- Item 8 -->
+              <label class="checkbox-item">
+                <input type="checkbox" class="weight-check" data-weight="0.3" checked>
+                <div class="checkbox-info">
+                  <span class="checkbox-name">Compass & Maps</span>
+                  <span class="checkbox-weight">0.3 kg (Navigation)</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Results -->
+          <div class="calc-results">
+            <h4 style="color: var(--text-highlight); margin-bottom: 1.5rem; letter-spacing: 0.05em; font-family: var(--font-header);">
+              MOBILITY ANALYSIS
+            </h4>
+            
+            <div style="margin-bottom: 1.5rem;">
+              <p style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Total Loaded Cargo</p>
+              <h3 style="font-size: 2.2rem; color: var(--primary-glow);" id="calc-weight-total">12.8 kg</h3>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <p style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Stamina Drain Penalty</p>
+              <h3 style="font-size: 2.2rem; color: var(--accent-sanity-red);" id="calc-weight-penalty">+25.6%</h3>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <p style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Movement Weight Class</p>
+              <p style="font-size: 1.4rem; font-weight: 900; color: var(--accent-void-purple);" id="calc-weight-class">HEAVY</p>
+            </div>
+
+            <div id="weight-verdict" style="background: rgba(177, 0, 255, 0.1); border: 1px solid var(--accent-void-purple); padding: 1rem; border-radius: var(--border-radius-md); font-size: 0.85rem; color: var(--text-primary); margin-top: 1.5rem;">
+              SLUGGISH SQUAD. Movement speed reduced by 15%. Footfall noise increased significantly!
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ==========================================================================
+           CALCULATOR 3: EXTRACTION SUCCESS ESTIMATOR
+           ========================================================================== -->
+      <div class="calc-section animate-fade-in" id="calc-extract-section">
+        <h2 class="calc-section-title">3. EXTRACTION SUCCESS ESTIMATOR</h2>
+        
+        <div class="calc-container">
+          <!-- Inputs -->
+          <div class="calc-inputs">
+            
+            <div class="form-group">
+              <label for="extract-sanity-slider">Squad Average Sanity: <span id="extract-sanity-val">75%</span></label>
+              <input type="range" id="extract-sanity-slider" min="10" max="100" value="75" class="range-slider">
+            </div>
+
+            <div class="form-group">
+              <label for="extract-shrines">Active Gateway Shrines Charging:</label>
+              <select id="extract-shrines" class="select-input">
+                <option value="1" selected>1 Active Column (Long 90s Holdout)</option>
+                <option value="2">2 Active Columns (Standard 60s Holdout)</option>
+                <option value="3">3 Active Columns (Instant 30s Warp)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="extract-threat">Surrounding Swarm Threat Level:</label>
+              <select id="extract-threat" class="select-input">
+                <option value="low">Low (Y'm-bhi Sentinels only)</option>
+                <option value="medium" selected>Medium (Gugs present in region)</option>
+                <option value="high">High (Formless Spawn crawling)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="extract-traps">Defensive Steel Traps Placed:</label>
+              <select id="extract-traps" class="select-input">
+                <option value="0">0 Traps laid (Unprotected)</option>
+                <option value="1">1 Active Trap</option>
+                <option value="2" selected>2 Traps guarding chokepoints</option>
+                <option value="3">3+ Traps covering all entries</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- Results -->
+          <div class="calc-results">
+            <h4 style="color: var(--text-highlight); margin-bottom: 1.5rem; letter-spacing: 0.05em; font-family: var(--font-header);">
+              EXTRACTION CHANCE
+            </h4>
+            
+            <!-- Animated Gauge -->
+            <div class="calc-gauge">
+              <div class="gauge-circle" id="extract-gauge-circle">
+                <span class="gauge-value" id="extract-gauge-val">72%</span>
+              </div>
+            </div>
+
+            <div id="extract-verdict" style="background: rgba(0, 255, 204, 0.1); border: 1px solid var(--primary-glow); padding: 1rem; border-radius: var(--border-radius-md); font-size: 0.85rem; color: var(--text-primary);">
+              FAVORABLE CONDITIONS. Coordinate defenses, defend navigation ports, and prepare to fire.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer" id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">THE MOUND<span>: OOM</span></div>
+          <p class="footer-desc">
+            The ultimate fan-built guide and database for The Mound: Omen of Cthulhu. Developed to assist all explorers of the cold cognitive deep.
+          </p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Database</h4>
+          <ul class="footer-links">
+            <li><a href="bestiary.html" class="footer-link">Creature Bestiary</a></li>
+            <li><a href="equipment.html" class="footer-link">Equipment Database</a></li>
+            <li><a href="calculator.html" class="footer-link">Expedition Planner</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul class="footer-links">
+            <li><a href="guides.html" class="footer-link">Survival Guides</a></li>
+            <li><a href="lore.html" class="footer-link">Mythos & Lore</a></li>
+            <li><a href="https://store.steampowered.com" class="footer-link" target="_blank">Steam Store</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Site & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="privacy.html#terms" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Mound: Omen of Cthulhu Fan Wiki. All rights reserved. Game content and materials are trademarks of ACE Team / Nacon.</p>
+        <p>Designed by <a href="#" style="color: var(--primary-glow);">Antigravity</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" id="btn-back-to-top" aria-label="Back to top">▲</button>
+
+  <script src="../js/main.js"></script>
+
+  <!-- CALCULATOR REACTION SCRIPTS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // ==========================================================================
+      // 1. SANITY DRAIN LOGIC
+      // ==========================================================================
+      const sanityBaseSlider = document.getElementById('sanity-base-slider');
+      const sanityBaseVal = document.getElementById('sanity-base-val');
+      const sanitySquad = document.getElementById('sanity-squad');
+      const sanityDepth = document.getElementById('sanity-depth');
+      const sanityLight = document.getElementById('sanity-light');
+      const sanityTimeSlider = document.getElementById('sanity-time-slider');
+      const sanityTimeVal = document.getElementById('sanity-time-val');
+      
+      const calcSanityRate = document.getElementById('calc-sanity-rate');
+      const calcSanityFinal = document.getElementById('calc-sanity-final');
+      const calcSanityCritical = document.getElementById('calc-sanity-critical');
+      const sanityVerdict = document.getElementById('sanity-verdict');
+
+      const updateSanityCalc = () => {
+        const base = parseFloat(sanityBaseSlider.value);
+        const time = parseInt(sanityTimeSlider.value);
+        sanityBaseVal.innerText = base + '%';
+        sanityTimeVal.innerText = time + ' Minutes';
+
+        // Base drain per minute
+        let drainRate = 1.0;
+
+        // Squad size modifier
+        const squad = parseInt(sanitySquad.value);
+        if (squad === 1) drainRate += 0.8; // Loneliness penalty
+        else if (squad === 2) drainRate += 0.2;
+        else if (squad === 3) drainRate -= 0.1;
+        else if (squad === 4) drainRate -= 0.3; // Proximity buff
+
+        // Depth modifier
+        const depth = sanityDepth.value;
+        if (depth === 'kn-yan') drainRate += 0.1;
+        else if (depth === 'yoth') drainRate += 0.7;
+        else if (depth === 'nkai') drainRate += 1.8;
+
+        // Light source protection
+        const light = sanityLight.value;
+        if (light === 'none') drainRate += 2.0; // PITCH BLACKNESS PENALTY
+        else if (light === 'torch') drainRate -= 0.2;
+        else if (light === 'lantern') drainRate -= 0.5;
+        else if (light === 'lens') drainRate -= 0.9;
+
+        // Clamp drain rate to minimum 0.1%
+        drainRate = Math.max(0.1, drainRate);
+
+        const totalLoss = drainRate * time;
+        const finalSanity = Math.max(0, (base - totalLoss)).toFixed(1);
+        
+        calcSanityRate.innerText = drainRate.toFixed(2) + '% / min';
+        calcSanityFinal.innerText = finalSanity + '%';
+
+        // Calculate time to critical (< 30% sanity)
+        if (base <= 30) {
+          calcSanityCritical.innerText = 'IMMEDIATE';
+        } else {
+          const minutesToCrit = ((base - 30) / drainRate).toFixed(1);
+          calcSanityCritical.innerText = minutesToCrit + ' Minutes';
+        }
+
+        // Verdict output styling
+        if (finalSanity > 70) {
+          sanityVerdict.innerText = 'STABLE MIND. Minor whispers detected but easily suppressed.';
+          sanityVerdict.style.backgroundColor = 'rgba(0, 255, 204, 0.1)';
+          sanityVerdict.style.borderColor = 'var(--primary-glow)';
+          sanityVerdict.style.color = 'var(--text-primary)';
+        } else if (finalSanity > 30) {
+          sanityVerdict.innerText = 'WARNING: STRESS PATTERNS. minor audio distortions and shadows shifting. Pack Sedative Vials immediately!';
+          sanityVerdict.style.backgroundColor = 'rgba(255, 242, 0, 0.1)';
+          sanityVerdict.style.borderColor = '#fff200';
+          sanityVerdict.style.color = '#fff';
+        } else {
+          sanityVerdict.innerText = 'CRITICAL CODE RED: SANITY SHATTERED. severe sensory hallucinations active. Hallway walls warp. Controls inverted. Ingest heavy Laudanum drops now!';
+          sanityVerdict.style.backgroundColor = 'rgba(255, 51, 102, 0.15)';
+          sanityVerdict.style.borderColor = 'var(--accent-sanity-red)';
+          sanityVerdict.style.color = 'var(--text-highlight)';
+        }
+      };
+
+      sanityBaseSlider.addEventListener('input', updateSanityCalc);
+      sanitySquad.addEventListener('change', updateSanityCalc);
+      sanityDepth.addEventListener('change', updateSanityCalc);
+      sanityLight.addEventListener('change', updateSanityCalc);
+      sanityTimeSlider.addEventListener('input', updateSanityCalc);
+
+      updateSanityCalc(); // Init
+
+      // ==========================================================================
+      // 2. EQUIPMENT WEIGHT LOGIC
+      // ==========================================================================
+      const weightChecks = document.querySelectorAll('.weight-check');
+      const calcWeightTotal = document.getElementById('calc-weight-total');
+      const calcWeightPenalty = document.getElementById('calc-weight-penalty');
+      const calcWeightClass = document.getElementById('calc-weight-class');
+      const weightVerdict = document.getElementById('weight-verdict');
+
+      const updateWeightCalc = () => {
+        let total = 0;
+        weightChecks.forEach(chk => {
+          if (chk.checked) {
+            total += parseFloat(chk.getAttribute('data-weight'));
+          }
+        });
+
+        // 2% stamina penalty per kg
+        const penalty = (total * 2).toFixed(1);
+        calcWeightTotal.innerText = total.toFixed(1) + ' kg';
+        calcWeightPenalty.innerText = '+' + penalty + '%';
+
+        if (total < 5.0) {
+          calcWeightClass.innerText = 'LIGHT';
+          calcWeightClass.style.color = 'var(--primary-glow)';
+          weightVerdict.innerText = 'NIMBLE SCAVENGER. Sprint duration maximum, footsteps quiet. Excellent for scouts.';
+          weightVerdict.style.backgroundColor = 'rgba(0, 255, 204, 0.1)';
+          weightVerdict.style.borderColor = 'var(--primary-glow)';
+        } else if (total <= 12.0) {
+          calcWeightClass.innerText = 'MEDIUM';
+          calcWeightClass.style.color = '#fff200';
+          weightVerdict.innerText = 'STANDARD RANGING. Moderate stamina penalty, normal footfall levels. Highly balanced.';
+          weightVerdict.style.backgroundColor = 'rgba(255, 242, 0, 0.05)';
+          weightVerdict.style.borderColor = '#fff200';
+        } else {
+          calcWeightClass.innerText = 'HEAVY';
+          calcWeightClass.style.color = 'var(--accent-sanity-red)';
+          weightVerdict.innerText = 'SLUGGISH SQUAD. Movement speed reduced by 15%. Footfalls extremely loud. Sensed easily by Gugs!';
+          weightVerdict.style.backgroundColor = 'rgba(255, 51, 102, 0.1)';
+          weightVerdict.style.borderColor = 'var(--accent-sanity-red)';
+        }
+      };
+
+      weightChecks.forEach(chk => chk.addEventListener('change', updateWeightCalc));
+      updateWeightCalc(); // Init
+
+      // ==========================================================================
+      // 3. EXTRACTION SUCCESS LOGIC
+      // ==========================================================================
+      const extractSanitySlider = document.getElementById('extract-sanity-slider');
+      const extractSanityVal = document.getElementById('extract-sanity-val');
+      const extractShrines = document.getElementById('extract-shrines');
+      const extractThreat = document.getElementById('extract-threat');
+      const extractTraps = document.getElementById('extract-traps');
+
+      const extractGaugeCircle = document.getElementById('extract-gauge-circle');
+      const extractGaugeVal = document.getElementById('extract-gauge-val');
+      const extractVerdict = document.getElementById('extract-verdict');
+
+      const updateExtractCalc = () => {
+        const sanity = parseFloat(extractSanitySlider.value);
+        extractSanityVal.innerText = sanity + '%';
+
+        // Base probability starts with squad sanity balance
+        let probability = sanity * 0.7;
+
+        // Shrines buff
+        const shrines = parseInt(extractShrines.value);
+        if (shrines === 1) probability += 5;
+        else if (shrines === 2) probability += 15;
+        else if (shrines === 3) probability += 30; // Quick escape portal
+
+        // Threat penalty
+        const threat = extractThreat.value;
+        if (threat === 'low') probability += 10;
+        else if (threat === 'medium') probability -= 5;
+        else if (threat === 'high') probability -= 25; // Formless spawn penalty
+
+        // Trap defense buff
+        const traps = parseInt(extractTraps.value);
+        probability += traps * 8;
+
+        // Clamp probability between 5% and 99%
+        probability = Math.floor(Math.max(5, Math.min(99, probability)));
+
+        extractGaugeVal.innerText = probability + '%';
+        
+        // Update conic-gradient of circle gauge
+        const degree = (probability / 100) * 360;
+        extractGaugeCircle.style.background = `conic-gradient(var(--primary-glow) ${degree}deg, rgba(0, 255, 204, 0.05) ${degree}deg)`;
+
+        // Update Verdict text
+        if (probability >= 75) {
+          extractVerdict.innerText = 'OPTIMAL CONDITIONS. High escape chance. Hold the gateway chokepoints and prepare to extract.';
+          extractVerdict.style.backgroundColor = 'rgba(0, 255, 204, 0.1)';
+          extractVerdict.style.borderColor = 'var(--primary-glow)';
+        } else if (probability >= 45) {
+          extractVerdict.innerText = 'HIGH EXPEDITION TENSION. Holdout will be close. Ensure traps are placed and stay in the lantern radius!';
+          extractVerdict.style.backgroundColor = 'rgba(255, 242, 0, 0.05)';
+          extractVerdict.style.borderColor = '#fff200';
+        } else {
+          extractVerdict.innerText = 'IMMINENT DESTRUCT PROTOCOL. Extreme hazard. Deploy smelling salts, pop all sedatives, and run for your lives!';
+          extractVerdict.style.backgroundColor = 'rgba(255, 51, 102, 0.1)';
+          extractVerdict.style.borderColor = 'var(--accent-sanity-red)';
+        }
+      };
+
+      extractSanitySlider.addEventListener('input', updateExtractCalc);
+      extractShrines.addEventListener('change', updateExtractCalc);
+      extractThreat.addEventListener('change', updateExtractCalc);
+      extractTraps.addEventListener('change', updateExtractCalc);
+
+      updateExtractCalc(); // Init
+    });
+  </script>
+</body>
+</html>

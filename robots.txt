@@ -1,0 +1,10 @@
+# robots.txt — The Mound: Omen of Cthulhu Fan Wiki
+
+User-agent: *
+Allow: /
+
+# Block nothing for now (static fan site). Add Disallow rules here later
+# if you create admin/search/duplicate-parameter pages.
+
+# Sitemap location
+Sitemap: https://themound.online/sitemap.xml

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your complete guide to The Mound: Omen of Cthulhu. Explore survival strategies, Lovecraftian lore, bestiary, equipment database, and interactive expedition planner. Releasing July 15, 2026.">
+  <meta name="keywords" content="The Mound Omen of Cthulhu, co-op horror game 2026, Lovecraftian game guide, K'n-yan, Cthulhu mythos, extraction game, sanity system, bestiary, equipment database">
+  <meta name="author" content="Antigravity Web Designs">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://themound.online/">
+  <meta property="og:title" content="The Mound: Omen of Cthulhu — Ultimate Game Guide & Wiki">
+  <meta property="og:description" content="Your complete guide to The Mound: Omen of Cthulhu. Explore survival strategies, Lovecraftian lore, bestiary, equipment database, and interactive expedition planner.">
+  <meta property="og:image" content="images/hero-banner.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="The Mound: Omen of Cthulhu — Ultimate Game Guide & Wiki">
+  <meta property="twitter:description" content="Master the abyss with our comprehensive guides, interactive planners, bestiary, and equipment database for The Mound.">
+  <meta property="twitter:image" content="images/hero-banner.png">
+
+  <title>The Mound: Omen of Cthulhu — Ultimate Game Guide & Wiki</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://themound.online/">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured Data: WebSite + VideoGame -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://themound.online/#website",
+        "url": "https://themound.online/",
+        "name": "The Mound: Omen of Cthulhu Fan Wiki",
+        "description": "Complete fan guide and wiki for The Mound: Omen of Cthulhu — survival strategies, Lovecraftian lore, bestiary, equipment database, and an interactive expedition planner.",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "VideoGame",
+        "name": "The Mound: Omen of Cthulhu",
+        "description": "A co-op tactical cosmic horror extraction game. Descend into the subterranean realm of K'n-yan, extract eldritch artifacts, manage sanity, and escape before the abyss claims your crew.",
+        "image": "https://themound.online/images/hero-banner.png",
+        "genre": ["Cosmic Horror", "Co-op", "Survival", "Extraction"],
+        "gamePlatform": ["PC", "PlayStation 5", "Xbox Series X|S"],
+        "playMode": ["CoOp", "SinglePlayer"],
+        "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 4 },
+        "publisher": { "@type": "Organization", "name": "Nacon" },
+        "author": { "@type": "Organization", "name": "ACE Team" },
+        "datePublished": "2026-07-15"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER / STICKY NAVIGATION
+       ========================================================================== -->
+  <header class="header" id="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="nav-logo">
+        THE MOUND<span>: OMEN OF CTHULHU</span>
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li class="nav-item"><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li class="nav-item"><a href="pages/articles/index.html" class="nav-link" id="nav-news">News</a></li>
+          <li class="nav-item"><a href="pages/guides.html" class="nav-link" id="nav-guides">Guides</a></li>
+          <li class="nav-item"><a href="pages/lore.html" class="nav-link" id="nav-lore">Lore</a></li>
+          <li class="nav-item"><a href="pages/bestiary.html" class="nav-link" id="nav-bestiary">Bestiary</a></li>
+          <li class="nav-item"><a href="pages/equipment.html" class="nav-link" id="nav-equipment">Equipment</a></li>
+          <li class="nav-item"><a href="pages/calculator.html" class="nav-link" id="nav-calculator">Planner</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="nav-hamburger-toggle" aria-label="Toggle mobile menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero" id="home-hero">
+    <div class="hero-bg" style="background-image: url('images/hero-banner.png');"></div>
+    <div class="hero-overlay"></div>
+    <canvas id="hero-canvas"></canvas>
+    
+    <div class="hero-content">
+      <p class="hero-subtitle">CO-OP TACTICAL COSMIC HORROR</p>
+      <h1 class="hero-title">SURVIVE THE COLD COGNITIVE DEEP</h1>
+      <p class="hero-desc">
+        A terrifying co-op expedition into cursed ruins, where ancient gods stir, sanity fractures, and only meticulous planning stands between your crew and eternal oblivion.
+      </p>
+      
+      <div class="btn-group">
+        <a href="pages/guides.html" class="btn btn-primary" id="btn-hero-guides">Read Survival Guides</a>
+        <a href="pages/calculator.html" class="btn btn-secondary" id="btn-hero-planner">Plan Expedition</a>
+      </div>
+
+      <!-- COUNTDOWN TIMER TO RELEASE -->
+      <div class="animate-fade-in" style="margin-top: 4rem;">
+        <h3 style="font-size: 0.9rem; font-family: var(--font-header); letter-spacing: 0.15em; color: var(--text-secondary); text-transform: uppercase;">
+          The Abyss Awakens In
+        </h3>
+        <div class="countdown-container" id="release-countdown">
+          <div class="countdown-box">
+            <div class="countdown-val" id="days">00</div>
+            <div class="countdown-label">Days</div>
+          </div>
+          <div class="countdown-box">
+            <div class="countdown-val" id="hours">00</div>
+            <div class="countdown-label">Hours</div>
+          </div>
+          <div class="countdown-box">
+            <div class="countdown-val" id="minutes">00</div>
+            <div class="countdown-label">Mins</div>
+          </div>
+          <div class="countdown-box">
+            <div class="countdown-val" id="seconds">00</div>
+            <div class="countdown-label">Secs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       OVERVIEW SECTION
+       ========================================================================== -->
+  <section id="game-overview" style="background-color: var(--bg-dark-abyss);">
+    <div class="container">
+      <div class="feature-block">
+        <div class="feature-block-img">
+          <img src="images/jungle-exploration.png" alt="Exploring the Cursed Mesoamerican Jungle">
+        </div>
+        <div class="feature-block-content animate-fade-in">
+          <h2>THE MISSION</h2>
+          <p class="card-text" style="font-size: 1.1rem; line-height: 1.8;">
+            Deep within the untamed jungle mounds of Oklahoma, an entrance lies hidden. It leads to <strong>K'n-yan</strong>, a colossal subterranean civilization of immortal executioners, red-litten ruins, and cosmic entities. As 16th-century explorers or modern scavengers, your team must venture down, extract eldritch artifacts, study unspeakable entities, and escape before sanity splits wide open.
+          </p>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div class="stat-label">EXPEDITION RISK</div>
+              <div class="stat-value red">EXTREME</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">CO-OP SIZE</div>
+              <div class="stat-value">1 - 4 PLAYERS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CORE FEATURES SECTION
+       ========================================================================== -->
+  <section id="game-features">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 4rem;">
+        <h2>CORE GAMEPLAY SYSTEMS</h2>
+        <p style="color: var(--text-secondary);">Meticulous planning and absolute coordination are mandatory. Master these pillars to survive.</p>
+      </div>
+
+      <div class="grid">
+        <!-- Feature 1 -->
+        <div class="card animate-fade-in" id="feat-coop">
+          <div class="card-icon">👥</div>
+          <h3 class="card-title">Co-op Squad Tactics</h3>
+          <p class="card-text">
+            Balance weight, delegate lighting, and assign roles. A lone explorer is immediately picked apart by subterranean lurkers. Keep communication clear.
+          </p>
+          <a href="pages/guides.html#coop-strategy" class="footer-link">View Squad Strategies →</a>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="card card-purple animate-fade-in" id="feat-sanity">
+          <div class="card-icon">👁️</div>
+          <h3 class="card-title">Sanity Degradation</h3>
+          <p class="card-text">
+            Bioluminescent flora, horrific encounters, and absolute darkness wear on the mind. Once sanity fractures, hallucinations alter reality for you and you alone.
+          </p>
+          <a href="pages/guides.html#sanity-management" class="footer-link">Sanity Mechanics Guide →</a>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="card animate-fade-in" id="feat-extraction">
+          <div class="card-icon">🧭</div>
+          <h3 class="card-title">Extraction Loop</h3>
+          <p class="card-text">
+            Descend, secure high-value eldritch relics, and manage your escape. The deeper you venture, the higher the reward—but extraction points collapse over time.
+          </p>
+          <a href="pages/guides.html#extraction-strategy" class="footer-link">Extraction Tactics →</a>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="card card-purple animate-fade-in" id="feat-world">
+          <div class="card-icon">⚡</div>
+          <h3 class="card-title">Dynamic Sub-Levels</h3>
+          <p class="card-text">
+            Three terrifying subterranean layers: the red-lit K'n-yan, the shadow-locked Yoth, and the pitch-black void of N'kai. The world morphs in response to cosmic alignment.
+          </p>
+          <a href="pages/lore.html#levels" class="footer-link">Explore Level Lore →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LORE TEASER SECTION
+       ========================================================================== -->
+  <section id="lore-teaser" style="background-color: var(--bg-dark-abyss); overflow: hidden;">
+    <div class="container">
+      <div class="feature-block">
+        <div class="feature-block-content animate-fade-in">
+          <h2>THE MYTHOLOGY OF THE MOUND</h2>
+          <p class="card-text" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+            Based closely on the haunting novella by H.P. Lovecraft and Zealia Bishop, <em>The Mound</em> unravels the mystery of K'n-yan, a subterranean realm of ancient humanoids who conquered death, only to succumb to decadent boredom and horrific worship of Cthulhu and Yig. Discover the narrative chronicles written by Panfilo de Zamacona in 1545.
+          </p>
+          <a href="pages/lore.html" class="btn btn-secondary" id="btn-lore-teaser">Unravel the Lore</a>
+        </div>
+        <div class="feature-block-img">
+          <img src="images/kn-yan-ruins.png" alt="Cyclopean Ruins of K'n-yan">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LATEST NEWS & DEVLOGS
+       ========================================================================== -->
+  <section id="news-section">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto 4rem;">
+        <h2>COMMUNITY DEVLOGS</h2>
+        <p style="color: var(--text-secondary);">Stay updated with the latest alerts from the expedition team.</p>
+      </div>
+
+      <div class="grid">
+        <!-- News 1 -->
+        <article class="card animate-fade-in" style="display:flex; flex-direction:column;">
+          <div class="card-image-wrapper">
+            <img src="images/creature-eldritch.png" alt="Eldritch creature research report">
+          </div>
+          <h3 class="card-title" style="font-size: 1.2rem;">Devlog #12: Designing Cosmic Terror</h3>
+          <p class="card-text" style="font-size:0.9rem;">
+            Learn how the developers at ACE Team crafted the visual identity of the Y'm-bhi slave corpses and the liquid shadows of N'kai.
+          </p>
+          <div class="card-meta">
+            <span>📅 May 20, 2026</span> • <span>👤 ACE Team Devs</span>
+          </div>
+        </article>
+
+        <!-- News 2 -->
+        <article class="card card-purple animate-fade-in" style="display:flex; flex-direction:column;">
+          <div class="card-image-wrapper">
+            <img src="images/sanity-system.png" alt="Sanity mechanic interface design">
+          </div>
+          <h3 class="card-title" style="font-size: 1.2rem;">System Preview: The Sanity Interface</h3>
+          <p class="card-text" style="font-size:0.9rem;">
+            A deep-dive into the psychological UI. Read about visual warping, audio hallucinations, and how sanity affects co-op teammates.
+          </p>
+          <div class="card-meta">
+            <span>📅 May 15, 2026</span> • <span>👤 Design Lead</span>
+          </div>
+        </article>
+
+        <!-- News 3 -->
+        <article class="card animate-fade-in" style="display:flex; flex-direction:column;">
+          <div class="card-image-wrapper">
+            <img src="images/galleon-ship.png" alt="Galleon base of operations screenshot">
+          </div>
+          <h3 class="card-title" style="font-size: 1.2rem;">Upcoming Beta: Galleon Hub Operations</h3>
+          <p class="card-text" style="font-size:0.9rem;">
+            The first public closed beta begins June 12! Sign up now to test the Spanish Galleon base hub and initial loadout selections.
+          </p>
+          <div class="card-meta">
+            <span>📅 May 08, 2026</span> • <span>👤 Community Mgr</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       NEWSLETTER SIGNUP
+       ========================================================================== -->
+  <section style="background-color: var(--bg-dark-abyss); text-align: center;">
+    <div class="container animate-fade-in" style="max-width: 600px;">
+      <h2 style="margin-bottom: 1rem;">SUBSCRIBE FOR EXPEDITION INTEL</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+        Get notified instantly about the upcoming closed beta periods, equipment database additions, and lore translations.
+      </p>
+      <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); alert('Intel registered! Safe explorations, traveler.');">
+        <input type="email" placeholder="Enter your email address" class="text-input" required id="newsletter-email">
+        <button type="submit" class="btn btn-primary" id="newsletter-submit">Join Intel</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer" id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">THE MOUND<span>: OOM</span></div>
+          <p class="footer-desc">
+            The ultimate fan-built guide and database for The Mound: Omen of Cthulhu. Developed to assist all explorers of the cold cognitive deep.
+          </p>
+          <div class="footer-socials">
+            <a href="https://twitter.com" class="footer-social-icon" aria-label="Twitter" target="_blank">𝕏</a>
+            <a href="https://discord.gg" class="footer-social-icon" aria-label="Discord" target="_blank">💬</a>
+            <a href="https://youtube.com" class="footer-social-icon" aria-label="YouTube" target="_blank">▶</a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Database</h4>
+          <ul class="footer-links">
+            <li><a href="pages/bestiary.html" class="footer-link">Creature Bestiary</a></li>
+            <li><a href="pages/equipment.html" class="footer-link">Equipment Database</a></li>
+            <li><a href="pages/calculator.html" class="footer-link">Expedition Planner</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul class="footer-links">
+            <li><a href="pages/guides.html" class="footer-link">Survival Guides</a></li>
+            <li><a href="pages/lore.html" class="footer-link">Mythos & Lore</a></li>
+            <li><a href="https://store.steampowered.com" class="footer-link" target="_blank">Steam Store</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Site & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="pages/about.html" class="footer-link">About Us</a></li>
+            <li><a href="pages/contact.html" class="footer-link">Contact</a></li>
+            <li><a href="pages/privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="pages/privacy.html#terms" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Mound: Omen of Cthulhu Fan Wiki. All rights reserved. Game content and materials are trademarks of ACE Team / Nacon.</p>
+        <p>Designed by <a href="#" style="color: var(--primary-glow);">Antigravity</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       COOKIE CONSENT BANNER
+       ========================================================================== -->
+  <div class="cookie-banner" id="cookie-consent-popup">
+    <p class="cookie-text">
+      This fansite uses local storage cookies to remember your sanity estimations and equipment weight layouts for future explorations. By continuing to browse, you agree to our psychological protection protocols.
+    </p>
+    <div class="cookie-actions">
+      <button class="btn btn-primary btn-small cookie-accept" id="cookie-accept-btn">I Accept</button>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" id="btn-back-to-top" aria-label="Back to top">▲</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
