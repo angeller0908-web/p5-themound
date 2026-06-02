@@ -1,0 +1,11 @@
+# Secrets & automation state — never commit these
+*.env
+.env
+ai_editor.env
+ai_editor_seen.json
+ai_editor_last_run.txt
+服务器密码.txt
+*密码*.txt
+
+# OS junk
+.DS_Store
