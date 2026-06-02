@@ -41,20 +41,30 @@ document.addEventListener('DOMContentLoaded', () => {
   // ACTIVE NAVIGATION LINK MARKER
   // ==========================================================================
   const highlightActiveLink = () => {
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    navLinks.forEach(link => {
-      const linkPath = link.getAttribute('href');
-      // Resolve path matching for sub-directories or index
-      if (currentPath.endsWith(linkPath) || 
-          (linkPath === '../index.html' && currentPath.includes('/pages/')) ||
-          (linkPath === 'index.html' && (currentPath.endsWith('/') || currentPath.endsWith('index.html')))) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
+    const path = window.location.pathname;
+
+    // Clear all active states first
+    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+
+    // Match by nav-id using URL path patterns (most specific first).
+    // Regex handles both /page and /page.html (Cloudflare drops .html).
+    const rules = [
+      { id: 'nav-news',       test: p => p.includes('/articles') },
+      { id: 'nav-guides',     test: p => /\/guides(\.html)?$/.test(p) },
+      { id: 'nav-lore',       test: p => /\/lore(\.html)?$/.test(p) },
+      { id: 'nav-bestiary',   test: p => /\/bestiary(\.html)?$/.test(p) },
+      { id: 'nav-equipment',  test: p => /\/equipment(\.html)?$/.test(p) },
+      { id: 'nav-calculator', test: p => /\/calculator(\.html)?$/.test(p) },
+      { id: 'nav-home',       test: p => p === '/' || /\/(index(\.html)?)?$/.test(p) },
+    ];
+
+    for (const rule of rules) {
+      if (rule.test(path)) {
+        const el = document.getElementById(rule.id);
+        if (el) el.classList.add('active');
+        break; // only one nav item active at a time
       }
-    });
+    }
   };
   highlightActiveLink();
 
