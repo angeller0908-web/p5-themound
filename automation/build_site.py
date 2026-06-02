@@ -252,11 +252,11 @@ def upsert_hub_card(meta, dry=False):
     if href in hub:
         print(f"  hub: card for {href} already present — skip")
         return
-    n_cards = hub.count('class="card-meta"')
-    purple = " card-purple" if n_cards % 2 == 1 else ""
+    # Always insert at the TOP of the grid (newest articles first).
+    # New card never gets card-purple so it sits cleanly at position 1.
     card = f'''
         <!-- Article: {esc(meta['title'])} -->
-        <article class="card{purple} animate-fade-in" style="display:flex; flex-direction:column;">
+        <article class="card animate-fade-in" style="display:flex; flex-direction:column;">
           <div class="card-image-wrapper">
             <a href="{href}"><img src="../../images/{meta.get('image','hero-banner.png')}" alt="{esc(meta.get('image_alt', meta['title']))}"></a>
           </div>
@@ -268,15 +268,16 @@ def upsert_hub_card(meta, dry=False):
           <a href="{href}" class="footer-link" style="margin-top:auto;">Read more →</a>
         </article>
 '''
-    anchor = "\n      </div>\n\n      <p style="
+    # Insert right after the opening <div class="grid"> tag
+    anchor = '<div class="grid">\n'
     if anchor not in hub:
-        anchor = "\n      </div>"  # fallback: first closing of grid
-    new_hub = hub.replace(anchor, card + anchor, 1)
+        anchor = '<div class="grid">'  # fallback without trailing newline
+    new_hub = hub.replace(anchor, anchor + card, 1)
     if dry:
-        print(f"  hub: WOULD insert card for {href}")
+        print(f"  hub: WOULD insert card for {href} (at top)")
         return
     HUB_FILE.write_text(new_hub, encoding="utf-8")
-    print(f"  hub: inserted card for {href}")
+    print(f"  hub: inserted card for {href} (at top)")
 
 
 def upsert_sitemap(meta, dry=False):
