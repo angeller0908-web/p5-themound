@@ -309,8 +309,19 @@ def normalize_meta(meta, md_path):
         raise SystemExit(f"ERROR: {md_path} is missing required 'title' in frontmatter")
     meta.setdefault("slug", md_path.stem)
     today = _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d")
-    meta["_date"] = (meta.get("date") or today)
-    meta["_date_mod"] = (meta.get("date_modified") or today)
+    # Normalize to a plain YYYY-MM-DD. Accepts full ISO datetimes coming from the
+    # automation pipeline (e.g. "2026-06-04T01:00:19+00:00") as well as date-only strings,
+    # so the card/byline never shows a raw timestamp.
+    def _date_only(value, fallback):
+        s = str(value or "").strip()
+        if not s:
+            return fallback
+        try:
+            return _dt.datetime.fromisoformat(s.replace("Z", "+00:00")).strftime("%Y-%m-%d")
+        except Exception:
+            return s[:10]
+    meta["_date"] = _date_only(meta.get("date"), today)
+    meta["_date_mod"] = _date_only(meta.get("date_modified"), today)
     # display form: "June 1, 2026"
     def disp(d):
         try:
