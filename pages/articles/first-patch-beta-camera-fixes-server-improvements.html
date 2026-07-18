@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) — GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV21PXX090"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XV21PXX090');
+  </script>
+  <meta name="description" content="Everything you need to know about the first major patch for The Mound: Omen of Cthulhu, including how to access the beta branch, camera setting fixes, and new crossplay features.">
+  <meta name="keywords" content="the mound omen of cthulhu patch notes, the mound omen of cthulhu beta branch, cinematic camera fix, server finder, crossplay password, optimization update">
+  <meta name="author" content="The Mound Fan Wiki Editors">
+
+  <title>The Mound: Omen of Cthulhu - First Patch Beta, Camera Fixes, and Server Improvements</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://themound.online/pages/articles/first-patch-beta-camera-fixes-server-improvements.html">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="apple-touch-icon" href="../../favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://themound.online/pages/articles/first-patch-beta-camera-fixes-server-improvements.html">
+  <meta property="og:title" content="The Mound: Omen of Cthulhu - First Patch Beta, Camera Fixes, and Server Improvements">
+  <meta property="og:description" content="Everything you need to know about the first major patch for The Mound: Omen of Cthulhu, including how to access the beta branch, camera setting fixes, and new crossplay features.">
+  <meta property="og:image" content="https://themound.online/images/auto_first-patch-beta-camera-fixes-server-improvements.webp">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="The Mound: Omen of Cthulhu - First Patch Beta, Camera Fixes, and Server Improvements">
+  <meta property="twitter:description" content="Everything you need to know about the first major patch for The Mound: Omen of Cthulhu, including how to access the beta branch, camera setting fixes, and new crossplay features.">
+  <meta property="twitter:image" content="https://themound.online/images/auto_first-patch-beta-camera-fixes-server-improvements.webp">
+
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .article-body { max-width: 800px; margin: 0 auto; }
+    .article-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 1.5rem; }
+    .article-body h2 { font-size: 1.6rem; margin-top: 2.75rem; margin-bottom: 1rem; }
+    .article-body h3 { font-size: 1.2rem; margin-top: 1.75rem; margin-bottom: 0.6rem; color: var(--primary-glow); }
+    .article-body p { color: var(--text-secondary); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.02rem; }
+    .article-body ul, .article-body ol { color: var(--text-secondary); line-height: 1.85; margin: 0 0 1.5rem 1.3rem; }
+    .article-body li { margin-bottom: 0.6rem; }
+    .article-body a { color: var(--primary-glow); }
+    .key-facts { background: rgba(0,255,204,0.05); border: 1px solid rgba(0,255,204,0.2); border-radius: 10px; padding: 1.5rem 1.75rem; margin: 0 0 2.5rem; }
+    .key-facts h2 { margin-top: 0; font-size: 1.15rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--primary-glow); }
+    .key-facts table { width: 100%; border-collapse: collapse; }
+    .key-facts td { padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); vertical-align: top; color: var(--text-secondary); }
+    .key-facts td:first-child { font-weight: 600; color: var(--text-primary); width: 38%; }
+    .specs-table, .cmp-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; font-size: 0.95rem; }
+    .specs-table th, .specs-table td, .cmp-table th, .cmp-table td { text-align: left; padding: 0.7rem 0.9rem; border: 1px solid rgba(255,255,255,0.08); color: var(--text-secondary); vertical-align: top; }
+    .specs-table th, .cmp-table th { background: rgba(177,0,255,0.08); color: var(--text-primary); }
+    .specs-table td:first-child, .cmp-table td:first-child { font-weight: 600; color: var(--text-primary); }
+    .breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; }
+    .breadcrumbs a { color: var(--text-secondary); }
+    .note { font-size: 0.9rem; color: var(--text-muted); font-style: italic; border-left: 3px solid var(--secondary-glow, #7a00ff); padding-left: 1rem; margin: 2rem 0; }
+    .badge { display:inline-block; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:rgba(177,0,255,0.2); color:#d9a6ff; padding:0.2rem 0.6rem; border-radius:4px; vertical-align:middle; margin-left:0.5rem; }
+    .creature, .realm { border-left: 3px solid var(--primary-glow); padding-left: 1.25rem; margin: 1.5rem 0; }
+    .creature h3, .realm h3 { margin-top: 0; }
+    .tag { display:inline-block; font-size:0.68rem; letter-spacing:0.06em; text-transform:uppercase; padding:0.15rem 0.55rem; border-radius:4px; vertical-align:middle; margin-left:0.5rem; }
+    .tag-confirmed { background:rgba(0,255,204,0.18); color:#7dffe6; }
+    .tag-expected { background:rgba(177,0,255,0.2); color:#d9a6ff; }
+    .faq h3 { color: var(--text-primary); }
+    @media (max-width: 600px) { .cmp-table { font-size: 0.8rem; } .cmp-table th, .cmp-table td { padding: 0.45rem 0.5rem; } }
+  </style>
+
+  <!-- Structured Data: Breadcrumb + Article (+ FAQ) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://themound.online/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "News & Guides",
+          "item": "https://themound.online/pages/articles/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Mound: Omen of Cthulhu - First Patch Beta, Camera Fixes, and Server Improvements",
+          "item": "https://themound.online/pages/articles/first-patch-beta-camera-fixes-server-improvements.html"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "The Mound: Omen of Cthulhu - First Patch Beta, Camera Fixes, and Server Improvements",
+      "description": "Everything you need to know about the first major patch for The Mound: Omen of Cthulhu, including how to access the beta branch, camera setting fixes, and new crossplay features.",
+      "image": "https://themound.online/images/auto_first-patch-beta-camera-fixes-server-improvements.webp",
+      "datePublished": "2026-07-18",
+      "dateModified": "2026-07-18",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "name": "The Mound Fan Wiki"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Mound Fan Wiki"
+      },
+      "about": {
+        "@type": "VideoGame",
+        "name": "The Mound: Omen of Cthulhu"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I access the beta branch for The Mound: Omen of Cthulhu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can access the beta branch via your Steam library by right-clicking the game, selecting Properties, navigating to the Betas tab, and choosing the open beta branch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is there input lag in The Mound: Omen of Cthulhu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Input lag is often caused by the default 'Cinematic' camera setting. Switching to the 'Default' camera in the settings can significantly improve responsiveness."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- HEADER / STICKY NAVIGATION -->
+  <header class="header" id="main-header">
+    <div class="container nav-container">
+      <a href="../../index.html" class="logo" id="nav-logo">
+        THE MOUND<span>: OMEN OF CTHULHU</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li class="nav-item"><a href="../../index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link active" id="nav-news">News</a></li>
+          <li class="nav-item"><a href="../guides.html" class="nav-link" id="nav-guides">Guides</a></li>
+          <li class="nav-item"><a href="../lore.html" class="nav-link" id="nav-lore">Lore</a></li>
+          <li class="nav-item"><a href="../bestiary.html" class="nav-link" id="nav-bestiary">Bestiary</a></li>
+          <li class="nav-item"><a href="../equipment.html" class="nav-link" id="nav-equipment">Equipment</a></li>
+          <li class="nav-item"><a href="../calculator.html" class="nav-link" id="nav-calculator">Planner</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="nav-hamburger-toggle" aria-label="Toggle mobile menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SUB HERO -->
+  <section class="sub-hero" id="article-hero">
+    <div class="sub-hero-bg" style="background-image: url('../../images/auto_first-patch-beta-camera-fixes-server-improvements.webp');"></div>
+    <div class="sub-hero-overlay"></div>
+    <div class="container sub-hero-content">
+      <h1 class="sub-hero-title" style="font-size: 2.4rem;">The Mound: Omen of Cthulhu - First Patch Beta, Camera Fixes, and Server Improvements</h1>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section style="padding-top: 3rem;">
+    <div class="container">
+      <article class="article-body animate-fade-in">
+
+        <div class="breadcrumbs">
+          <a href="../../index.html">Home</a> › <a href="index.html">News &amp; Guides</a> › The Mound: Omen of Cthulhu - First Patch Beta, Camera Fixes, and Server Improvements
+        </div>
+
+        <div class="article-meta">
+          📅 Published July 18, 2026 · Last updated July 18, 2026 · By The Mound Fan Wiki Editors · ~6 min read
+        </div>
+
+        <div class="key-facts">
+          <h2>The Quick Answer</h2>
+          <table>
+            <tr><td>Update Type</td><td>Beta Branch Patch</td></tr>
+            <tr><td>Key Features</td><td>Optimization, Server Finder, Camera Settings</td></tr>
+            <tr><td>Crossplay</td><td>Disabled during Beta testing</td></tr>
+            <tr><td>Current Price</td><td>Expected to be around $15.55 (48% off on select storefronts)</td></tr>
+          </table>
+        </div>
+
+        <p>Launch weeks for multiplayer horror games are notoriously chaotic, and <em>The Mound: Omen of Cthulhu</em> is no exception. We have been running through the jungle, desperately trying to manage our sanity while horrifying eldritch creatures breathe down our necks. The atmosphere is thick, and the co-op dynamics are stressful in the best way possible. However, the technical side of the experience has left a bit to be desired. Frame drops, clunky inventory management, and some serious input lag have plagued the initial release.</p>
+        <p>Thankfully, the developers at Nacon are already addressing the most glaring issues. According to the latest Steam News update, a massive first patch is hitting the Beta Branch next week. This isn't just a minor hotfix; it brings foundational changes to performance, camera responsiveness, and how we connect with cross-platform friends. </p>
+        <p>If you are tired of losing your hard-earned loot because your frame rate tanked during a chase sequence, or if you simply cannot figure out how to join your console friends reliably, this upcoming update is exactly what you have been waiting for. Here is a full breakdown of what is changing, how to fix your input lag immediately, and how to prepare for the beta branch.</p>
+        <h2>Performance and Optimization: The Biggest Priority</h2>
+        <p>Let's talk about the elephant in the room: optimization. Navigating the dark, cursed ruins of <em>The Mound</em> requires extreme precision. When the game stutters or drops frames during an intense encounter with a mind-bending entity, the resulting death feels incredibly cheap. The upcoming patch notes highlight optimization—specifically targeting FPS and overall performance—as a primary focus. </p>
+        <p>While the developers haven't shared the exact technical granularities of what they are tweaking under the hood, it is highly expected that we will see significant adjustments to how the game handles dynamic lighting and the dense jungle foliage. Horror games rely heavily on shadow rendering, which is notoriously taxing on hardware. If you have been holding off on playing because your mid-range rig is struggling to maintain a smooth 60 FPS, this beta patch is going to be the ultimate testing ground to see if the game is finally stable enough for a competitive playthrough.</p>
+        <h2>Inventory Management: A Keyboard and Mouse Overhaul</h2>
+        <p>Inventory tetris is a core part of survival horror. You need to know exactly where your medkits, light sources, and defensive tools are at all times. The current inventory system in <em>The Mound</em> feels a bit sluggish, especially when you are actively losing your mind to hallucinations and need to use an item quickly.</p>
+        <p>The upcoming patch is introducing a complete rework of inventory management specifically tailored for keyboard and mouse users. This is a massive quality-of-life improvement. Being able to drag, drop, and hotkey items fluidly will drastically reduce the friction of simply trying to survive. </p>
+        <p>For the controller players out there, you will have to wait a little longer. The developers explicitly noted that controller-specific inventory improvements will follow in a later update. Until then, you might want to stick to pre-organizing your loadout in safe zones before heading deeper into the ruins.</p>
+        <h2>Fixing Input Lag: Cinematic vs. Default Camera</h2>
+        <p>Perhaps the most actionable piece of intel from the developer update is the clarification regarding camera settings. A vocal portion of the community has been reporting a distinct lack of responsiveness—often described as input lag or a "floaty" feeling when looking around. In a game where snapping your vision to a strange noise in the dark is a matter of life and death, input lag is a dealbreaker.</p>
+        <p>The developers have confirmed that this sensation is largely tied to the camera configuration. The game features a "Cinematic" camera setting, which applies heavy smoothing and acceleration to simulate the weight and movement of a horror movie shot. It looks fantastic for trailers, but it feels awful to play on a mouse.</p>
+        <p>You do not need to wait for the patch to fix this. If you are experiencing this lag, head into your settings menu right now and switch your camera from "Cinematic" to "Default." The upcoming patch will introduce a more obvious preconfiguration screen when you boot up the game, forcing players to make an active choice between visual flair (Cinematic) and raw responsiveness (Default). If you care about surviving, always pick Default.</p>
+        <h2>Server Finder and Cross-Platform Passwords</h2>
+        <p>Co-op is the lifeblood of <em>The Mound: Omen of Cthulhu</em>. Reviewers and players alike praise the squad mechanics, especially how the game isolates players by feeding them different audio and visual hallucinations. As gaming outlets like GameSpew noted, this is a game where you "can't trust your eyes or ears." But to experience that psychological torment, you actually have to get into a game together.</p>
+        <p>The matchmaking system is getting a much-needed overhaul. The introduction of a dedicated Server Finder will allow you to browse open lobbies rather than relying entirely on random matchmaking. This makes it infinitely easier to find groups that use microphones—a strict requirement for a game built around communication and sanity checks.</p>
+        <p>Furthermore, playing with friends on different hardware is getting smoothed out. The patch introduces password-protected lobbies specifically designed for cross-platform play. You can finally set up a private server, share the password with your console friends, and dive into the madness without random players filling the empty slots.</p>
+        <h2>Important Note: Crossplay is Disabled in the Beta Branch</h2>
+        <p>If you plan on testing these new features next week, there is one massive caveat: crossplay is completely disabled on the Beta Branch. Because console platforms require rigorous certification processes for patches, the experimental beta is strictly limited to PC players testing against the same build version. If your regular squad consists of PlayStation or Xbox players, you will need to stay on the live build to keep playing together until the patch officially launches across all platforms. This is expected to be a temporary limitation during the testing phase.</p>
+        <h2>How to Access the Steam Beta Branch</h2>
+        <p>When the patch goes live next week, accessing it will require a few quick steps on Steam. The process is expected to follow standard Steam beta opt-in procedures:</p>
+        <ol>
+        <li>Open your Steam Library.</li>
+        <li>Right-click on <em>The Mound: Omen of Cthulhu</em> and select <strong>Properties</strong>.</li>
+        <li>Navigate down to the <strong>Betas</strong> tab on the left sidebar.</li>
+        <li>In the <strong>Beta Participation</strong> drop-down menu, select the newly available test branch (often labeled as "public_beta" or something similar).</li>
+        <li>Steam will immediately begin downloading the patch.</li>
+        </ol>
+        <p>Remember that opting into a beta branch means you are playing an unstable build. Expect crashes, weird bugs, and potentially broken mechanics as the developers gather data.</p>
+        <h2>Current Pricing and Is It Time to Jump In?</h2>
+        <p>If you have been on the fence about picking up the game due to the mixed reception around its performance, the current pricing might tip the scales. Various storefronts and bundle deals (including heavy discounts spotted by the community on sites like GameBillet) currently have the game marked down by 48%, bringing the price to an estimated $15.55. </p>
+        <p>At that price point, the sheer ambition of the game's sanity system makes it worth the entry fee. The fact that you cannot trust your own eyes or ears—where one player might see an empty hallway while another sees a writhing mass of tentacles—creates organic, panic-inducing moments that few other multiplayer horror games can replicate. With the developers actively pushing out optimization patches and quality-of-life updates within days of launch, the future looks incredibly promising. </p>
+        <p>Grab some friends, fix your camera settings, and prepare to lose your mind.</p>
+
+        <div class="faq">
+          <h2>FAQ</h2>
+          <h3>How do I access the beta branch for The Mound: Omen of Cthulhu?</h3>
+          <p>You can access the beta branch via your Steam library by right-clicking the game, selecting Properties, navigating to the Betas tab, and choosing the open beta branch.</p>
+          <h3>Why is there input lag in The Mound: Omen of Cthulhu?</h3>
+          <p>Input lag is often caused by the default 'Cinematic' camera setting. Switching to the 'Default' camera in the settings can significantly improve responsiveness.</p>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">THE MOUND<span>: OOM</span></div>
+          <p class="footer-desc">
+            The ultimate fan-built guide and database for The Mound: Omen of Cthulhu. Developed to assist all explorers of the cold cognitive deep.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Database</h4>
+          <ul class="footer-links">
+            <li><a href="../bestiary.html" class="footer-link">Creature Bestiary</a></li>
+            <li><a href="../equipment.html" class="footer-link">Equipment Database</a></li>
+            <li><a href="../calculator.html" class="footer-link">Expedition Planner</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Site & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html" class="footer-link">About Us</a></li>
+            <li><a href="../contact.html" class="footer-link">Contact</a></li>
+            <li><a href="../privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="../privacy.html#terms" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul class="footer-links">
+            <li><a href="../guides.html" class="footer-link">Survival Guides</a></li>
+            <li><a href="../lore.html" class="footer-link">Mythos & Lore</a></li>
+            <li><a href="https://store.steampowered.com/app/2569760/The_Mound_Omen_of_Cthulhu/" class="footer-link" target="_blank">Steam Store</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Mound: Omen of Cthulhu Fan Wiki. All rights reserved. Game content and materials are trademarks of ACE Team / Nacon.</p>
+        <p>Designed by <a href="#" style="color: var(--primary-glow);">Antigravity</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="btn-back-to-top" aria-label="Back to top">▲</button>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
