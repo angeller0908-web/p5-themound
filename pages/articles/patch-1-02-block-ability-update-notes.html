@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) — GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV21PXX090"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XV21PXX090');
+  </script>
+  <meta name="description" content="Patch 1.02 for The Mound: Omen of Cthulhu introduces a highly requested block mechanic, critical performance fixes for Ultra settings, and a save recovery tool.">
+  <meta name="keywords" content="the mound omen of cthulhu patch 1.02, block ability, the mound update, omen of cthulhu patch notes, the mound performance fix">
+  <meta name="author" content="The Mound Fan Wiki Editors">
+
+  <title>The Mound: Omen of Cthulhu Patch 1.02 Adds Crucial Block Ability and Fixes Performance Drops</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://themound.online/pages/articles/patch-1-02-block-ability-update-notes.html">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="apple-touch-icon" href="../../favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://themound.online/pages/articles/patch-1-02-block-ability-update-notes.html">
+  <meta property="og:title" content="The Mound: Omen of Cthulhu Patch 1.02 Adds Crucial Block Ability and Fixes Performance Drops">
+  <meta property="og:description" content="Patch 1.02 for The Mound: Omen of Cthulhu introduces a highly requested block mechanic, critical performance fixes for Ultra settings, and a save recovery tool.">
+  <meta property="og:image" content="https://themound.online/images/auto_patch-1-02-block-ability-update-notes.webp">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="The Mound: Omen of Cthulhu Patch 1.02 Adds Crucial Block Ability and Fixes Performance Drops">
+  <meta property="twitter:description" content="Patch 1.02 for The Mound: Omen of Cthulhu introduces a highly requested block mechanic, critical performance fixes for Ultra settings, and a save recovery tool.">
+  <meta property="twitter:image" content="https://themound.online/images/auto_patch-1-02-block-ability-update-notes.webp">
+
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .article-body { max-width: 800px; margin: 0 auto; }
+    .article-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 1.5rem; }
+    .article-body h2 { font-size: 1.6rem; margin-top: 2.75rem; margin-bottom: 1rem; }
+    .article-body h3 { font-size: 1.2rem; margin-top: 1.75rem; margin-bottom: 0.6rem; color: var(--primary-glow); }
+    .article-body p { color: var(--text-secondary); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.02rem; }
+    .article-body ul, .article-body ol { color: var(--text-secondary); line-height: 1.85; margin: 0 0 1.5rem 1.3rem; }
+    .article-body li { margin-bottom: 0.6rem; }
+    .article-body a { color: var(--primary-glow); }
+    .key-facts { background: rgba(0,255,204,0.05); border: 1px solid rgba(0,255,204,0.2); border-radius: 10px; padding: 1.5rem 1.75rem; margin: 0 0 2.5rem; }
+    .key-facts h2 { margin-top: 0; font-size: 1.15rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--primary-glow); }
+    .key-facts table { width: 100%; border-collapse: collapse; }
+    .key-facts td { padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); vertical-align: top; color: var(--text-secondary); }
+    .key-facts td:first-child { font-weight: 600; color: var(--text-primary); width: 38%; }
+    .specs-table, .cmp-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; font-size: 0.95rem; }
+    .specs-table th, .specs-table td, .cmp-table th, .cmp-table td { text-align: left; padding: 0.7rem 0.9rem; border: 1px solid rgba(255,255,255,0.08); color: var(--text-secondary); vertical-align: top; }
+    .specs-table th, .cmp-table th { background: rgba(177,0,255,0.08); color: var(--text-primary); }
+    .specs-table td:first-child, .cmp-table td:first-child { font-weight: 600; color: var(--text-primary); }
+    .breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; }
+    .breadcrumbs a { color: var(--text-secondary); }
+    .note { font-size: 0.9rem; color: var(--text-muted); font-style: italic; border-left: 3px solid var(--secondary-glow, #7a00ff); padding-left: 1rem; margin: 2rem 0; }
+    .badge { display:inline-block; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:rgba(177,0,255,0.2); color:#d9a6ff; padding:0.2rem 0.6rem; border-radius:4px; vertical-align:middle; margin-left:0.5rem; }
+    .creature, .realm { border-left: 3px solid var(--primary-glow); padding-left: 1.25rem; margin: 1.5rem 0; }
+    .creature h3, .realm h3 { margin-top: 0; }
+    .tag { display:inline-block; font-size:0.68rem; letter-spacing:0.06em; text-transform:uppercase; padding:0.15rem 0.55rem; border-radius:4px; vertical-align:middle; margin-left:0.5rem; }
+    .tag-confirmed { background:rgba(0,255,204,0.18); color:#7dffe6; }
+    .tag-expected { background:rgba(177,0,255,0.2); color:#d9a6ff; }
+    .faq h3 { color: var(--text-primary); }
+    @media (max-width: 600px) { .cmp-table { font-size: 0.8rem; } .cmp-table th, .cmp-table td { padding: 0.45rem 0.5rem; } }
+  </style>
+
+  <!-- Structured Data: Breadcrumb + Article (+ FAQ) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://themound.online/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "News & Guides",
+          "item": "https://themound.online/pages/articles/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Mound: Omen of Cthulhu Patch 1.02 Adds Crucial Block Ability and Fixes Performance Drops",
+          "item": "https://themound.online/pages/articles/patch-1-02-block-ability-update-notes.html"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "The Mound: Omen of Cthulhu Patch 1.02 Adds Crucial Block Ability and Fixes Performance Drops",
+      "description": "Patch 1.02 for The Mound: Omen of Cthulhu introduces a highly requested block mechanic, critical performance fixes for Ultra settings, and a save recovery tool.",
+      "image": "https://themound.online/images/auto_patch-1-02-block-ability-update-notes.webp",
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-07-30",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "name": "The Mound Fan Wiki"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Mound Fan Wiki"
+      },
+      "about": {
+        "@type": "VideoGame",
+        "name": "The Mound: Omen of Cthulhu"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I block in The Mound: Omen of Cthulhu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As of Patch 1.02, you can block incoming attacks by pressing Q on a keyboard or RB/R1 on a controller."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Did the developers fix the Ultra Settings lag?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Patch 1.02 addresses a critical memory or retention bug that caused low performance when re-launching the game on Ultra Settings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the progress recovery tool work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The new system scans your unlocked achievements or trophies across platforms to reverse-engineer and restore lost profile progress."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- HEADER / STICKY NAVIGATION -->
+  <header class="header" id="main-header">
+    <div class="container nav-container">
+      <a href="../../index.html" class="logo" id="nav-logo">
+        THE MOUND<span>: OMEN OF CTHULHU</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li class="nav-item"><a href="../../index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link active" id="nav-news">News</a></li>
+          <li class="nav-item"><a href="../guides.html" class="nav-link" id="nav-guides">Guides</a></li>
+          <li class="nav-item"><a href="../lore.html" class="nav-link" id="nav-lore">Lore</a></li>
+          <li class="nav-item"><a href="../bestiary.html" class="nav-link" id="nav-bestiary">Bestiary</a></li>
+          <li class="nav-item"><a href="../equipment.html" class="nav-link" id="nav-equipment">Equipment</a></li>
+          <li class="nav-item"><a href="../calculator.html" class="nav-link" id="nav-calculator">Planner</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="nav-hamburger-toggle" aria-label="Toggle mobile menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SUB HERO -->
+  <section class="sub-hero" id="article-hero">
+    <div class="sub-hero-bg" style="background-image: url('../../images/auto_patch-1-02-block-ability-update-notes.webp');"></div>
+    <div class="sub-hero-overlay"></div>
+    <div class="container sub-hero-content">
+      <h1 class="sub-hero-title" style="font-size: 2.4rem;">The Mound: Omen of Cthulhu Patch 1.02 Adds Crucial Block Ability and Fixes Performance Drops</h1>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section style="padding-top: 3rem;">
+    <div class="container">
+      <article class="article-body animate-fade-in">
+
+        <div class="breadcrumbs">
+          <a href="../../index.html">Home</a> › <a href="index.html">News &amp; Guides</a> › The Mound: Omen of Cthulhu Patch 1.02 Adds Crucial Block Ability and Fixes Performance Drops
+        </div>
+
+        <div class="article-meta">
+          📅 Published July 30, 2026 · Last updated July 30, 2026 · By The Mound Fan Wiki Editors · ~7 min read
+        </div>
+
+        <div class="key-facts">
+          <h2>The Quick Answer</h2>
+          <table>
+            <tr><td>Update Version</td><td>Patch 1.02</td></tr>
+            <tr><td>Key Feature</td><td>New Block Ability (Q / RB / R1)</td></tr>
+            <tr><td>Technical Fix</td><td>Ultra Settings performance drop resolved</td></tr>
+            <tr><td>Quality of Life</td><td>Achievement-based progress recovery tool added</td></tr>
+          </table>
+        </div>
+
+        <p>It has been a couple of weeks since ACE Team and Nacon officially opened the gates to the abyss, and players have been dying—a lot. The cosmic horror elements of <em>The Mound: Omen of Cthulhu</em> have proven to be just as unforgiving as the community anticipated. However, in response to a massive wave of player feedback regarding brutal survivability issues, the developers have rapidly rolled out Patch 1.02. While officially described as a "short patch," it introduces a fundamental shift in how you will approach enemy encounters: a dedicated Block ability.</p>
+        <p>Alongside this massive gameplay adjustment, Patch 1.02 brings critical performance fixes for high-end PCs, squashes a nasty enemy spawning bug, and introduces a clever progress recovery tool for those who have suffered from corrupted save files. Let's break down exactly what is in this update, how the new defensive mechanics alter your runs, and why you need to jump on the launch discount before it vanishes.</p>
+        <h2>The Addition of the Block Ability</h2>
+        <p>Since <a href="release-date-platforms-price.html">when the game launched</a>, the primary complaint echoing through the Steam forums and Reddit has been the sheer feeling of helplessness when cornered. The tight, claustrophobic corridors of the underground ruins leave little room for evasion. If an eldritch creature managed to close the distance, you were almost guaranteed to take physical damage and suffer a severe blow to your mental state (which you can read more about in our <a href="sanity-system-explained.html">sanity system explained</a> breakdown). </p>
+        <p>Patch 1.02 changes the equation entirely by adding a dedicated block function. By pressing <strong>Q on a keyboard</strong> or <strong>RB/R1 on a controller</strong>, your explorer will now raise their weapon or arms to mitigate incoming damage. This gives you a fighting chance to hold your ground and avoid getting immediately shredded by swarming horrors.</p>
+        <p>However, ACE Team is treading carefully here. In their developer notes, they explicitly stated, "We're aware that this could have a big effect on the balance and difficulty of the game." True survival horror relies on vulnerability. If a player can simply turtle up behind a block button and casually absorb strikes from cosmic entities, the terror evaporates. </p>
+        <p>Because the patch is fresh, specific damage mitigation numbers are <strong>not confirmed</strong>. It is currently an <strong>estimate</strong> among community testers that blocking will likely drain your stamina pool heavily, preventing you from holding the defensive stance indefinitely. We also <strong>expect</strong> that massive elite monsters will still be able to break your guard or inflict partial trauma through your block. The developers have asked the community to "sound off in the comments section about how it feels in-game," indicating that this mechanic is in an active testing phase and subject to future tuning.</p>
+        <h2>Tactical Implications for Solo and Co-op Play</h2>
+        <p>The introduction of a block ability fundamentally alters the tactical landscape of <em>The Mound: Omen of Cthulhu</em>. </p>
+        <p>If you are navigating the darkness alone, the block button is a vital lifeline. Previously, <a href="beginners-guide-10-things.html">beginners struggling with early missions</a> found that a single mistake in positioning meant instant death. Now, you possess a panic button that can buy you the precious seconds needed to create distance, reload your firearm, or pop a healing item. </p>
+        <p>For multiplayer squads, the block mechanic opens up entirely new strategies. As we discussed in our <a href="co-op-crossplay-solo-explained.html">co-op and crossplay feature</a>, team synergy is everything. With the ability to block, one player can effectively act as a vanguard, holding a narrow chokepoint and absorbing hits while the rest of the team focuses on crowd control or completing the objective. When comparing the game's pacing to other hardcore co-op shooters (see our <a href="vs-gtfo-lethal-company-darktide.html">comparison with GTFO and Darktide</a>), <em>The Mound</em> was previously lacking a true defensive frontline role. Patch 1.02 might have just accidentally—or brilliantly—created one.</p>
+        <h2>Fixing the Enemy Spawn "Clone" Bug</h2>
+        <p>One of the most frustrating issues present since day one was a spawning logic bug that caused multiple enemies of the exact same class to spawn simultaneously in certain mission sectors. </p>
+        <p><em>The Mound</em> thrives on its variety of terrors. If you've read up on the <a href="creatures-confirmed-preview.html">confirmed creatures in the game</a>, you know that dealing with a ranged threat, a stealthy ambusher, and a heavy bruiser simultaneously requires dynamic target prioritization. When the game's AI glitched and threw four identical heavy bruisers into a single cramped room, it broke the encounter design and created artificial, unfair difficulty spikes that ended runs prematurely.</p>
+        <p>Patch 1.02 fixes this issue. The internal Director AI will now properly randomize and cap enemy classes, returning the game's pacing to what the developers originally envisioned. Encounters should feel more varied and manageable, rewarding teams that bring diverse loadouts rather than punishing them with duplicated bullet sponges.</p>
+        <h2>Technical Fixes: Ultra Settings Performance</h2>
+        <p>Nothing ruins the immersion of an H.P. Lovecraft adaptation quite like a stuttering framerate. For players with high-end rigs trying to experience the horrors of <a href="lovecraft-novella-knyan-yoth-nkai.html">K'n-yan, Yoth, and N'kai</a> in maximum graphical fidelity, a nasty bug was causing severe performance degradation.</p>
+        <p>According to the patch notes, players were seeing low performance in Ultra Settings specifically when <em>re-launching</em> the game. This meant your very first session might run buttery smooth, but returning to the game later resulted in inexplicable lag and severe frame drops. ACE Team flagged this as a "Critical / Important" fix, and Patch 1.02 successfully resolves the memory leak or settings-retention issue. You should no longer need to constantly tweak your graphics settings or restart your PC to get the game running properly on Ultra. If you were holding off on upgrading your hardware for this game, double-check our <a href="system-requirements-expected.html">expected system requirements</a> to ensure your rig is ready for the stabilized Ultra preset.</p>
+        <h2>The Progress Recovery Tool</h2>
+        <p>Perhaps the most reassuring addition in Patch 1.02 is the new "Progress recovery tool." </p>
+        <p>In the chaotic first weeks of a progression-heavy co-op game, save file corruption is a sad reality. Losing hours of character leveling, unlocked weapons, and cosmetic gear can cause a player to drop a title entirely. </p>
+        <p>ACE Team has implemented a clever fallback system for all platforms (PC, Xbox, and PlayStation). If your local or cloud save is wiped, the game will now look at your unlocked platform achievements or trophies to rebuild your profile. While it is <strong>not confirmed</strong> if this tool recovers every single granular statistic or consumable item, we <strong>estimate</strong> that it functions by checking major progression milestones tied to achievements and restoring your character to the closest corresponding state. It is a massive quality-of-life safety net that shows the developers respect player time.</p>
+        <h2>Minor Bug Fixes and the End of the Launch Discount</h2>
+        <p>Rounding out the patch notes are two smaller but appreciated fixes. The developers have resolved an issue where "Saints" were not loading correctly after missions—a bug that was ironically introduced in the previous Patch 1.01. Additionally, a frustrating bug preventing combat knives from appearing in the player's hands has been addressed, meaning your last-resort melee weapon will actually be there when you swing it.</p>
+        <p>Finally, if you are reading this on July 29th or 30th, be aware that the community-generated 20% launch discount on Steam is officially ending today. The developers posted a final reminder on social media, urging players who are on the fence to jump in. If the game's initial punishing difficulty was keeping you from buying in, the addition of the new block mechanic in Patch 1.02 might be exactly the equalizer you were waiting for. (If you still need help deciding which version to buy once the sale ends, consult our <a href="editions-preorder-guide.html">editions and preorder guide</a> for a breakdown of the cosmetic packs).</p>
+        <h2>What's Next for The Mound?</h2>
+        <p><em>The Mound: Omen of Cthulhu</em> is clearly in an active state of iteration. By fundamentally altering the combat loop just weeks after release, ACE Team is demonstrating a willingness to prioritize fun and survivability over rigid adherence to their original, punishing design. </p>
+        <p>We highly recommend jumping into a few expeditions tonight to test out the new block mechanic. Observe how it affects your stamina, see how much sanity damage bleeds through, and most importantly, give the developers your feedback. The eldritch horrors aren't going anywhere, but at least now, we can throw an arm up before they bite.</p>
+
+        <div class="faq">
+          <h2>FAQ</h2>
+          <h3>How do I block in The Mound: Omen of Cthulhu?</h3>
+          <p>As of Patch 1.02, you can block incoming attacks by pressing Q on a keyboard or RB/R1 on a controller.</p>
+          <h3>Did the developers fix the Ultra Settings lag?</h3>
+          <p>Yes, Patch 1.02 addresses a critical memory or retention bug that caused low performance when re-launching the game on Ultra Settings.</p>
+          <h3>How does the progress recovery tool work?</h3>
+          <p>The new system scans your unlocked achievements or trophies across platforms to reverse-engineer and restore lost profile progress.</p>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">THE MOUND<span>: OOM</span></div>
+          <p class="footer-desc">
+            The ultimate fan-built guide and database for The Mound: Omen of Cthulhu. Developed to assist all explorers of the cold cognitive deep.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Database</h4>
+          <ul class="footer-links">
+            <li><a href="../bestiary.html" class="footer-link">Creature Bestiary</a></li>
+            <li><a href="../equipment.html" class="footer-link">Equipment Database</a></li>
+            <li><a href="../calculator.html" class="footer-link">Expedition Planner</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Site & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html" class="footer-link">About Us</a></li>
+            <li><a href="../contact.html" class="footer-link">Contact</a></li>
+            <li><a href="../privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="../privacy.html#terms" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul class="footer-links">
+            <li><a href="../guides.html" class="footer-link">Survival Guides</a></li>
+            <li><a href="../lore.html" class="footer-link">Mythos & Lore</a></li>
+            <li><a href="https://store.steampowered.com/app/2569760/The_Mound_Omen_of_Cthulhu/" class="footer-link" target="_blank">Steam Store</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Mound: Omen of Cthulhu Fan Wiki. All rights reserved. Game content and materials are trademarks of ACE Team / Nacon.</p>
+        <p>Designed by <a href="#" style="color: var(--primary-glow);">Antigravity</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="btn-back-to-top" aria-label="Back to top">▲</button>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
