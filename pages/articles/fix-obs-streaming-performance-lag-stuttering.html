@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) — GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV21PXX090"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XV21PXX090');
+  </script>
+  <meta name="description" content="Experiencing heavy dropped frames and rendering lag while streaming The Mound: Omen of Cthulhu? Here is how to configure OBS and in-game settings for a smooth broadcast.">
+  <meta name="keywords" content="the mound omen of cthulhu obs, stream lag, rendering lag, dropped frames, twitch enhanced broadcasting, optimize stream, performance fix, obs studio setup">
+  <meta name="author" content="The Mound Fan Wiki Editors">
+
+  <title>How to Fix OBS Streaming Lag and Stuttering in The Mound: Omen of Cthulhu</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://themound.online/pages/articles/fix-obs-streaming-performance-lag-stuttering.html">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="apple-touch-icon" href="../../favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://themound.online/pages/articles/fix-obs-streaming-performance-lag-stuttering.html">
+  <meta property="og:title" content="How to Fix OBS Streaming Lag and Stuttering in The Mound: Omen of Cthulhu">
+  <meta property="og:description" content="Experiencing heavy dropped frames and rendering lag while streaming The Mound: Omen of Cthulhu? Here is how to configure OBS and in-game settings for a smooth broadcast.">
+  <meta property="og:image" content="https://themound.online/images/auto_fix-obs-streaming-performance-lag-stuttering.webp">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="How to Fix OBS Streaming Lag and Stuttering in The Mound: Omen of Cthulhu">
+  <meta property="twitter:description" content="Experiencing heavy dropped frames and rendering lag while streaming The Mound: Omen of Cthulhu? Here is how to configure OBS and in-game settings for a smooth broadcast.">
+  <meta property="twitter:image" content="https://themound.online/images/auto_fix-obs-streaming-performance-lag-stuttering.webp">
+
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .article-body { max-width: 800px; margin: 0 auto; }
+    .article-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 1.5rem; }
+    .article-body h2 { font-size: 1.6rem; margin-top: 2.75rem; margin-bottom: 1rem; }
+    .article-body h3 { font-size: 1.2rem; margin-top: 1.75rem; margin-bottom: 0.6rem; color: var(--primary-glow); }
+    .article-body p { color: var(--text-secondary); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.02rem; }
+    .article-body ul, .article-body ol { color: var(--text-secondary); line-height: 1.85; margin: 0 0 1.5rem 1.3rem; }
+    .article-body li { margin-bottom: 0.6rem; }
+    .article-body a { color: var(--primary-glow); }
+    .key-facts { background: rgba(0,255,204,0.05); border: 1px solid rgba(0,255,204,0.2); border-radius: 10px; padding: 1.5rem 1.75rem; margin: 0 0 2.5rem; }
+    .key-facts h2 { margin-top: 0; font-size: 1.15rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--primary-glow); }
+    .key-facts table { width: 100%; border-collapse: collapse; }
+    .key-facts td { padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); vertical-align: top; color: var(--text-secondary); }
+    .key-facts td:first-child { font-weight: 600; color: var(--text-primary); width: 38%; }
+    .specs-table, .cmp-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; font-size: 0.95rem; }
+    .specs-table th, .specs-table td, .cmp-table th, .cmp-table td { text-align: left; padding: 0.7rem 0.9rem; border: 1px solid rgba(255,255,255,0.08); color: var(--text-secondary); vertical-align: top; }
+    .specs-table th, .cmp-table th { background: rgba(177,0,255,0.08); color: var(--text-primary); }
+    .specs-table td:first-child, .cmp-table td:first-child { font-weight: 600; color: var(--text-primary); }
+    .breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; }
+    .breadcrumbs a { color: var(--text-secondary); }
+    .note { font-size: 0.9rem; color: var(--text-muted); font-style: italic; border-left: 3px solid var(--secondary-glow, #7a00ff); padding-left: 1rem; margin: 2rem 0; }
+    .badge { display:inline-block; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:rgba(177,0,255,0.2); color:#d9a6ff; padding:0.2rem 0.6rem; border-radius:4px; vertical-align:middle; margin-left:0.5rem; }
+    .creature, .realm { border-left: 3px solid var(--primary-glow); padding-left: 1.25rem; margin: 1.5rem 0; }
+    .creature h3, .realm h3 { margin-top: 0; }
+    .tag { display:inline-block; font-size:0.68rem; letter-spacing:0.06em; text-transform:uppercase; padding:0.15rem 0.55rem; border-radius:4px; vertical-align:middle; margin-left:0.5rem; }
+    .tag-confirmed { background:rgba(0,255,204,0.18); color:#7dffe6; }
+    .tag-expected { background:rgba(177,0,255,0.2); color:#d9a6ff; }
+    .faq h3 { color: var(--text-primary); }
+    @media (max-width: 600px) { .cmp-table { font-size: 0.8rem; } .cmp-table th, .cmp-table td { padding: 0.45rem 0.5rem; } }
+  </style>
+
+  <!-- Structured Data: Breadcrumb + Article (+ FAQ) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://themound.online/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "News & Guides",
+          "item": "https://themound.online/pages/articles/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Fix OBS Streaming Lag and Stuttering in The Mound: Omen of Cthulhu",
+          "item": "https://themound.online/pages/articles/fix-obs-streaming-performance-lag-stuttering.html"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "How to Fix OBS Streaming Lag and Stuttering in The Mound: Omen of Cthulhu",
+      "description": "Experiencing heavy dropped frames and rendering lag while streaming The Mound: Omen of Cthulhu? Here is how to configure OBS and in-game settings for a smooth broadcast.",
+      "image": "https://themound.online/images/auto_fix-obs-streaming-performance-lag-stuttering.webp",
+      "datePublished": "2026-08-09",
+      "dateModified": "2026-08-09",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "name": "The Mound Fan Wiki"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Mound Fan Wiki"
+      },
+      "about": {
+        "@type": "VideoGame",
+        "name": "The Mound: Omen of Cthulhu"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does The Mound run perfectly fine on my monitor but lag on my Twitch stream?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This happens due to a GPU bottleneck. The game is utilizing nearly 100% of your graphics card to render smoothly on your end, leaving OBS with zero headroom to process and composite the stream scenes, resulting in rendering lag."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Twitch Enhanced Broadcasting and why should I disable it for this game?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enhanced Broadcasting encodes multiple resolutions (like 1080p, 720p, 480p) simultaneously on your local GPU instead of Twitch's servers. This puts massive strain on your NVENC encoder, which causes major stuttering when playing heavy titles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does running OBS as an Administrator actually improve stream performance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Running OBS as an Administrator forces Windows to prioritize allocating GPU resources to your broadcasting software, which prevents heavy games from starving OBS of the processing power it needs to output frames."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- HEADER / STICKY NAVIGATION -->
+  <header class="header" id="main-header">
+    <div class="container nav-container">
+      <a href="../../index.html" class="logo" id="nav-logo">
+        THE MOUND<span>: OMEN OF CTHULHU</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li class="nav-item"><a href="../../index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link active" id="nav-news">News</a></li>
+          <li class="nav-item"><a href="../guides.html" class="nav-link" id="nav-guides">Guides</a></li>
+          <li class="nav-item"><a href="../lore.html" class="nav-link" id="nav-lore">Lore</a></li>
+          <li class="nav-item"><a href="../bestiary.html" class="nav-link" id="nav-bestiary">Bestiary</a></li>
+          <li class="nav-item"><a href="../equipment.html" class="nav-link" id="nav-equipment">Equipment</a></li>
+          <li class="nav-item"><a href="../calculator.html" class="nav-link" id="nav-calculator">Planner</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="nav-hamburger-toggle" aria-label="Toggle mobile menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SUB HERO -->
+  <section class="sub-hero" id="article-hero">
+    <div class="sub-hero-bg" style="background-image: url('../../images/auto_fix-obs-streaming-performance-lag-stuttering.webp');"></div>
+    <div class="sub-hero-overlay"></div>
+    <div class="container sub-hero-content">
+      <h1 class="sub-hero-title" style="font-size: 2.4rem;">How to Fix OBS Streaming Lag and Stuttering in The Mound: Omen of Cthulhu</h1>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section style="padding-top: 3rem;">
+    <div class="container">
+      <article class="article-body animate-fade-in">
+
+        <div class="breadcrumbs">
+          <a href="../../index.html">Home</a> › <a href="index.html">News &amp; Guides</a> › How to Fix OBS Streaming Lag and Stuttering in The Mound: Omen of Cthulhu
+        </div>
+
+        <div class="article-meta">
+          📅 Published August 9, 2026 · Last updated August 9, 2026 · By The Mound Fan Wiki Editors · ~6 min read
+        </div>
+
+        <div class="key-facts">
+          <h2>The Quick Answer</h2>
+          <table>
+            <tr><td>Common Issue</td><td>High OBS rendering lag (up to 18% dropped frames)</td></tr>
+            <tr><td>Primary Culprit</td><td>Twitch Enhanced Broadcasting & GPU overload</td></tr>
+            <tr><td>Key Fix</td><td>Disable Enhanced Broadcasting, cap game at 60 FPS</td></tr>
+            <tr><td>Target Config</td><td>NVENC H.264, 1080p60, 6000 kbps, OBS Admin Mode</td></tr>
+          </table>
+        </div>
+
+        <p>If you have been trying to broadcast your exploration of the subterranean horrors of K'n-yan to your community, you might have run into a frustrating roadblock: your stream looks like a stop-motion slideshow. The Mound: Omen of Cthulhu is shaping up to be an incredibly atmospheric experience, but early community reports indicate that it demands a massive amount of hardware resources, particularly when paired with broadcasting software like OBS Studio.</p>
+        <p>Players are reporting a specific, highly annoying phenomenon. The game itself appears relatively smooth and responsive on the player's end, but the Twitch or YouTube stream output becomes a nightmare of heavy freezing, endless buffering, and severe audio-video desync. When you check your OBS statistics, you might see warning messages about "frames missed due to rendering lag," with rendering times spiking well over 20 milliseconds. </p>
+        <p>Streaming demanding PC games is always a balancing act, but cosmic horror titles with complex volumetric lighting, dynamic shadows, and heavy post-processing effects require specific optimizations. Let us break down exactly why this is happening and the community-reported methods to fix it.</p>
+        <h2>Diagnosing the Issue: Rendering Lag vs. Encoding Lag</h2>
+        <p>Before throwing random fixes at the wall, it is important to understand what is actually failing in your broadcast pipeline. </p>
+        <p>When you open the <code>Stats</code> dock in OBS Studio, pay attention to exactly which metric is turning red. For The Mound: Omen of Cthulhu, players are predominantly experiencing <strong>Rendering Lag</strong>. One prominent community tester reported up to 18% missed frames specifically tied to rendering, with OBS dropping to a choppy 24 FPS on the output side, despite the game running fine locally.</p>
+        <p><strong>Encoding Lag</strong> happens when your encoder (like NVENC or x264) cannot compress the video fast enough. <strong>Network Dropped Frames</strong> happen when your internet connection fluctuates. <strong>Rendering Lag</strong>, however, means OBS physically cannot draw the scene in time because your graphics card is completely maxed out by the game. </p>
+        <p>Because The Mound utilizes intense visual effects—likely tied to the <a href="sanity-system-explained.html">sanity system mechanics</a> and dynamic environment lighting—it pushes your GPU to 100% utilization. When the GPU is that heavily burdened, Windows puts OBS at the back of the line for resource allocation. OBS cannot render the frames, and your viewers get a frozen screen.</p>
+        <h2>The Silver Bullet: Disable Twitch Enhanced Broadcasting</h2>
+        <p>If you stream to Twitch, you might have opted into a relatively new feature called Enhanced Broadcasting. While incredibly useful for giving your viewers transcode options (the ability to select 1080p, 720p, or 480p), it is the primary culprit behind the severe performance tank in heavy games.</p>
+        <p>Normally, you send one 1080p feed to Twitch, and Twitch's servers handle the processing to create lower-resolution options. Enhanced Broadcasting offloads this work to your local GPU. Your NVENC encoder is suddenly asked to encode three or four different video streams simultaneously. </p>
+        <p>When a game is already pushing your hardware to its absolute limits, asking your GPU to handle multiple simultaneous video encodes will immediately cause the stream to crash and burn. </p>
+        <p><strong>How to disable it:</strong>
+        1. Open OBS Settings.
+        2. Navigate to the <code>Stream</code> tab.
+        3. If your Twitch account is connected, look for the <code>Enable Enhanced Broadcasting</code> checkbox.
+        4. Uncheck it immediately. </p>
+        <p>Community reports show that disabling this feature and reverting to a standard single-stream output (e.g., NVENC H.264, 1080p at 60 FPS, 6000 kbps) drastically reduces rendering times. In testing, this change alone helped drop rendering lag from a disastrous 13.2% down to near zero.</p>
+        <h2>Essential OBS Studio Configurations</h2>
+        <p>Beyond Twitch-specific features, you need to ensure OBS is configured to fight for its right to use your system resources. </p>
+        <h3>Run OBS as Administrator</h3>
+        <p>This is not a placebo effect; it is a fundamental requirement for single-PC streaming setups. When you right-click OBS and select "Run as Administrator," you are telling Windows 10 or 11 to elevate the priority of the program. If your GPU hits 99% usage, Windows will guarantee that OBS gets the small sliver of processing power it needs to composite frames before giving the rest to the game. If you run OBS normally, the game will greedily consume 100% of the GPU, leaving OBS to starve.</p>
+        <h3>Process Priority</h3>
+        <p>To add an extra layer of safety, go to OBS Settings -&gt; Advanced -&gt; General, and set the <code>Process Priority</code> to <strong>Above Normal</strong>. This ensures your CPU also treats your stream encoding as a critical task, which is especially important if you are utilizing <a href="co-op-crossplay-solo-explained.html">co-op or crossplay features</a>, as multiplayer networking naturally increases CPU overhead.</p>
+        <h3>Proper Capture Methods</h3>
+        <p>Never use Display Capture for modern PC games. Display Capture forces Windows to capture your entire desktop environment, which is highly inefficient. Ensure you are using a <strong>Game Capture</strong> source hooked specifically to the game's executable. If Game Capture fails to hook (a common issue in early builds of some titles), use Window Capture, but Game Capture should always be your first choice for performance.</p>
+        <h3>NVENC Preset Adjustments</h3>
+        <p>If you are using an NVIDIA card, you are likely using the NVENC H.264 encoder. Check your preset under Output -&gt; Streaming. By default, it might be set to P6 (Slower, Better Quality) or P7 (Slowest). Drop this down to <strong>P5 (Slow)</strong> or even <strong>P4 (Medium)</strong>. The visual difference to a viewer watching on a smartphone is completely imperceptible, but the amount of processing strain it removes from your graphics card is massive.</p>
+        <h2>In-Game Optimization: Making Room for OBS</h2>
+        <p>You cannot fix everything purely from the broadcasting software. You must make compromises in the game's settings menu to ensure your system meets the <a href="system-requirements-expected.html">expected system requirements</a> with enough overhead left to encode video.</p>
+        <h3>Cap Your Frame Rate</h3>
+        <p>This is the golden rule of streaming. If you have a 144Hz monitor, you might want the game to run at 144 FPS. However, if your GPU is fighting for its life to generate 144 frames every second, OBS will fail. </p>
+        <p>Cap your in-game frame rate to 60 FPS. Your stream is broadcasting at 60 FPS anyway. By artificially limiting the game to 60 frames, you immediately free up 20% to 40% of your GPU's processing power, handing that headroom directly to OBS. </p>
+        <h3>Utilize Upscaling (DLSS / FSR)</h3>
+        <p>Playing at native 1440p or 4K while streaming a modern, unoptimized title is asking for trouble. Community testers found stability by setting resolution to 2560x1440 but enabling DLSS on "Quality" or "Balanced" presets. Upscaling renders the internal game at a lower resolution and uses AI to reconstruct the image. It is practically a requirement for streaming heavy titles on mid-range hardware today.</p>
+        <h3>Lower VRAM-Heavy Settings</h3>
+        <p>Texture quality usually impacts VRAM rather than raw core processing, but Shadows, Volumetric Fog, and Ambient Occlusion will drain your performance. Drop Shadows and Volumetric Lighting to Medium. The claustrophobic, dark aesthetics of the game will hide lower-resolution shadows well enough that your Twitch chat will not notice, but your stream's framerate will thank you.</p>
+        <h2>Looking Forward to Optimization Patches</h2>
+        <p>It is highly likely that performance will stabilize as the game moves through its development cycle. Many of the current performance bottlenecks are standard hurdles for titles dealing with intense lighting engines and complex AI behaviors. Until the developers push dedicated optimization patches, maintaining a stable stream requires you to aggressively manage your hardware resources. </p>
+        <p>By disabling Twitch Enhanced Broadcasting, forcing OBS into Administrator mode, and capping your game's framerate, you can eliminate that dreaded rendering lag and get back to surviving the horrors below without your viewers staring at a frozen screen.</p>
+        <h2>Sources</h2>
+        <ul>
+        <li>Community testing and performance metrics based on reports from the r/TheMoundOmenofCthulhu subreddit.</li>
+        </ul>
+
+        <div class="faq">
+          <h2>FAQ</h2>
+          <h3>Why does The Mound run perfectly fine on my monitor but lag on my Twitch stream?</h3>
+          <p>This happens due to a GPU bottleneck. The game is utilizing nearly 100% of your graphics card to render smoothly on your end, leaving OBS with zero headroom to process and composite the stream scenes, resulting in rendering lag.</p>
+          <h3>What is Twitch Enhanced Broadcasting and why should I disable it for this game?</h3>
+          <p>Enhanced Broadcasting encodes multiple resolutions (like 1080p, 720p, 480p) simultaneously on your local GPU instead of Twitch's servers. This puts massive strain on your NVENC encoder, which causes major stuttering when playing heavy titles.</p>
+          <h3>Does running OBS as an Administrator actually improve stream performance?</h3>
+          <p>Yes. Running OBS as an Administrator forces Windows to prioritize allocating GPU resources to your broadcasting software, which prevents heavy games from starving OBS of the processing power it needs to output frames.</p>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">THE MOUND<span>: OOM</span></div>
+          <p class="footer-desc">
+            The ultimate fan-built guide and database for The Mound: Omen of Cthulhu. Developed to assist all explorers of the cold cognitive deep.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Database</h4>
+          <ul class="footer-links">
+            <li><a href="../bestiary.html" class="footer-link">Creature Bestiary</a></li>
+            <li><a href="../equipment.html" class="footer-link">Equipment Database</a></li>
+            <li><a href="../calculator.html" class="footer-link">Expedition Planner</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Site & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html" class="footer-link">About Us</a></li>
+            <li><a href="../contact.html" class="footer-link">Contact</a></li>
+            <li><a href="../privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="../privacy.html#terms" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul class="footer-links">
+            <li><a href="../guides.html" class="footer-link">Survival Guides</a></li>
+            <li><a href="../lore.html" class="footer-link">Mythos & Lore</a></li>
+            <li><a href="https://store.steampowered.com/app/2569760/The_Mound_Omen_of_Cthulhu/" class="footer-link" target="_blank">Steam Store</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Mound: Omen of Cthulhu Fan Wiki. All rights reserved. Game content and materials are trademarks of ACE Team / Nacon.</p>
+        <p>Designed by <a href="#" style="color: var(--primary-glow);">Antigravity</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="btn-back-to-top" aria-label="Back to top">▲</button>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
