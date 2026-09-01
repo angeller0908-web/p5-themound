@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) — GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV21PXX090"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XV21PXX090');
+  </script>
+  <meta name="description" content="Breakdown of The Mound&#x27;s Patch 1.04 update. Learn how to handle the three new forest enemies, locate hidden jewel boxes, and master Command Wheel 2.0.">
+  <meta name="keywords" content="the mound omen of cthulhu patch 1.04, the rosary occult item, hidden jewel boxes, new forest enemies, command wheel 2.0, cart mechanics, the mound update">
+  <meta name="author" content="The Mound Fan Wiki Editors">
+
+  <title>Surviving Patch 1.04 in The Mound: Omen of Cthulhu – Forest Horrors and The Rosary</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://themound.online/pages/articles/patch-104-forest-horrors-rosary-tactics.html">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="apple-touch-icon" href="../../favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://themound.online/pages/articles/patch-104-forest-horrors-rosary-tactics.html">
+  <meta property="og:title" content="Surviving Patch 1.04 in The Mound: Omen of Cthulhu – Forest Horrors and The Rosary">
+  <meta property="og:description" content="Breakdown of The Mound&#x27;s Patch 1.04 update. Learn how to handle the three new forest enemies, locate hidden jewel boxes, and master Command Wheel 2.0.">
+  <meta property="og:image" content="https://themound.online/images/auto_patch-104-forest-horrors-rosary-tactics.webp">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Surviving Patch 1.04 in The Mound: Omen of Cthulhu – Forest Horrors and The Rosary">
+  <meta property="twitter:description" content="Breakdown of The Mound&#x27;s Patch 1.04 update. Learn how to handle the three new forest enemies, locate hidden jewel boxes, and master Command Wheel 2.0.">
+  <meta property="twitter:image" content="https://themound.online/images/auto_patch-104-forest-horrors-rosary-tactics.webp">
+
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .article-body { max-width: 800px; margin: 0 auto; }
+    .article-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 1.5rem; }
+    .article-body h2 { font-size: 1.6rem; margin-top: 2.75rem; margin-bottom: 1rem; }
+    .article-body h3 { font-size: 1.2rem; margin-top: 1.75rem; margin-bottom: 0.6rem; color: var(--primary-glow); }
+    .article-body p { color: var(--text-secondary); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.02rem; }
+    .article-body ul, .article-body ol { color: var(--text-secondary); line-height: 1.85; margin: 0 0 1.5rem 1.3rem; }
+    .article-body li { margin-bottom: 0.6rem; }
+    .article-body a { color: var(--primary-glow); }
+    .key-facts { background: rgba(0,255,204,0.05); border: 1px solid rgba(0,255,204,0.2); border-radius: 10px; padding: 1.5rem 1.75rem; margin: 0 0 2.5rem; }
+    .key-facts h2 { margin-top: 0; font-size: 1.15rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--primary-glow); }
+    .key-facts table { width: 100%; border-collapse: collapse; }
+    .key-facts td { padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); vertical-align: top; color: var(--text-secondary); }
+    .key-facts td:first-child { font-weight: 600; color: var(--text-primary); width: 38%; }
+    .specs-table, .cmp-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; font-size: 0.95rem; }
+    .specs-table th, .specs-table td, .cmp-table th, .cmp-table td { text-align: left; padding: 0.7rem 0.9rem; border: 1px solid rgba(255,255,255,0.08); color: var(--text-secondary); vertical-align: top; }
+    .specs-table th, .cmp-table th { background: rgba(177,0,255,0.08); color: var(--text-primary); }
+    .specs-table td:first-child, .cmp-table td:first-child { font-weight: 600; color: var(--text-primary); }
+    .breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; }
+    .breadcrumbs a { color: var(--text-secondary); }
+    .note { font-size: 0.9rem; color: var(--text-muted); font-style: italic; border-left: 3px solid var(--secondary-glow, #7a00ff); padding-left: 1rem; margin: 2rem 0; }
+    .badge { display:inline-block; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:rgba(177,0,255,0.2); color:#d9a6ff; padding:0.2rem 0.6rem; border-radius:4px; vertical-align:middle; margin-left:0.5rem; }
+    .creature, .realm { border-left: 3px solid var(--primary-glow); padding-left: 1.25rem; margin: 1.5rem 0; }
+    .creature h3, .realm h3 { margin-top: 0; }
+    .tag { display:inline-block; font-size:0.68rem; letter-spacing:0.06em; text-transform:uppercase; padding:0.15rem 0.55rem; border-radius:4px; vertical-align:middle; margin-left:0.5rem; }
+    .tag-confirmed { background:rgba(0,255,204,0.18); color:#7dffe6; }
+    .tag-expected { background:rgba(177,0,255,0.2); color:#d9a6ff; }
+    .faq h3 { color: var(--text-primary); }
+    @media (max-width: 600px) { .cmp-table { font-size: 0.8rem; } .cmp-table th, .cmp-table td { padding: 0.45rem 0.5rem; } }
+  </style>
+
+  <!-- Structured Data: Breadcrumb + Article (+ FAQ) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://themound.online/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "News & Guides",
+          "item": "https://themound.online/pages/articles/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Surviving Patch 1.04 in The Mound: Omen of Cthulhu – Forest Horrors and The Rosary",
+          "item": "https://themound.online/pages/articles/patch-104-forest-horrors-rosary-tactics.html"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Surviving Patch 1.04 in The Mound: Omen of Cthulhu – Forest Horrors and The Rosary",
+      "description": "Breakdown of The Mound's Patch 1.04 update. Learn how to handle the three new forest enemies, locate hidden jewel boxes, and master Command Wheel 2.0.",
+      "image": "https://themound.online/images/auto_patch-104-forest-horrors-rosary-tactics.webp",
+      "datePublished": "2026-09-01",
+      "dateModified": "2026-09-01",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "name": "The Mound Fan Wiki"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Mound Fan Wiki"
+      },
+      "about": {
+        "@type": "VideoGame",
+        "name": "The Mound: Omen of Cthulhu"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you unlock The Rosary in The Mound: Omen of Cthulhu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You need to locate the newly added hidden jewel boxes scattered across the mainland area using your map. Finding all of them makes The Rosary available in the shop."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the Command Wheel 2.0 change?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It allows you to explicitly command the cart to stop and issue new directions, but you must be within a specific proximity range to the cart to issue these orders."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- HEADER / STICKY NAVIGATION -->
+  <header class="header" id="main-header">
+    <div class="container nav-container">
+      <a href="../../index.html" class="logo" id="nav-logo">
+        THE MOUND<span>: OMEN OF CTHULHU</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li class="nav-item"><a href="../../index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link active" id="nav-news">News</a></li>
+          <li class="nav-item"><a href="../guides.html" class="nav-link" id="nav-guides">Guides</a></li>
+          <li class="nav-item"><a href="../lore.html" class="nav-link" id="nav-lore">Lore</a></li>
+          <li class="nav-item"><a href="../bestiary.html" class="nav-link" id="nav-bestiary">Bestiary</a></li>
+          <li class="nav-item"><a href="../equipment.html" class="nav-link" id="nav-equipment">Equipment</a></li>
+          <li class="nav-item"><a href="../calculator.html" class="nav-link" id="nav-calculator">Planner</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="nav-hamburger-toggle" aria-label="Toggle mobile menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SUB HERO -->
+  <section class="sub-hero" id="article-hero">
+    <div class="sub-hero-bg" style="background-image: url('../../images/auto_patch-104-forest-horrors-rosary-tactics.webp');"></div>
+    <div class="sub-hero-overlay"></div>
+    <div class="container sub-hero-content">
+      <h1 class="sub-hero-title" style="font-size: 2.4rem;">Surviving Patch 1.04 in The Mound: Omen of Cthulhu – Forest Horrors and The Rosary</h1>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section style="padding-top: 3rem;">
+    <div class="container">
+      <article class="article-body animate-fade-in">
+
+        <div class="breadcrumbs">
+          <a href="../../index.html">Home</a> › <a href="index.html">News &amp; Guides</a> › Surviving Patch 1.04 in The Mound: Omen of Cthulhu – Forest Horrors and The Rosary
+        </div>
+
+        <div class="article-meta">
+          📅 Published September 1, 2026 · Last updated September 1, 2026 · By The Mound Fan Wiki Editors · ~6 min read
+        </div>
+
+        <div class="key-facts">
+          <h2>The Quick Answer</h2>
+          <table>
+            <tr><td>Update Version</td><td>1.04 Content Patch</td></tr>
+            <tr><td>New Threats</td><td>3 unknown entities added to the forest biome</td></tr>
+            <tr><td>New Item</td><td>The Rosary (Unlocked via Hidden Jewel Boxes)</td></tr>
+            <tr><td>System Update</td><td>Command Wheel 2.0 (Cart proximity controls)</td></tr>
+          </table>
+        </div>
+
+        <p>ACE Team has officially rolled out Patch 1.04 for <em>The Mound: Omen of Cthulhu</em>, marking a significant transition in their update cycle. After dedicating the past few weeks to much-needed quality-of-life adjustments—such as refining matchmaking, applying server filters, and implementing an emergency teleport for players stuck in the map geometry—the developers are now expanding the grim reality of the game. </p>
+        <p>This update isn't merely a bug-fix rollout; it fundamentally alters how expeditions are planned and executed, particularly when routing through the surface and forest regions. With three entirely new hostile entities introduced, a region-wide scavenger hunt for a highly anticipated Occult Item, and an overhaul to cart logistics, surviving the descent just got considerably more complicated. Here is a breakdown of what to expect and how to adapt your strategies for Patch 1.04.</p>
+        <h2>The Forest Depths: Adapting to Three New Horrors</h2>
+        <p>The most immediate and lethal threat introduced in 1.04 is the trio of new enemies inhabiting the forest depths. The ecosystem of <em>The Mound</em> is already hostile, but the patch notes explicitly state these horrors "appear when you least expect them." This phrasing implies mechanics built around ambush, camouflage, or triggering under specific environmental conditions, rather than traditional line-of-sight aggro radii.</p>
+        <p>For veteran explorers who have memorized the behaviors of the <a href="creatures-confirmed-preview.html">previously confirmed creatures</a>, this introduces a massive wildcard. The established bestiary already demands careful sound management and light discipline. If these new entities spawn unexpectedly or break standard pathing rules, the stress on your character's mental state will be severe. A sudden ambush isn't just a matter of physical damage; it will likely spike your fear meter, making your <a href="sanity-system-explained.html">sanity management</a> even more critical than before.</p>
+        <h3>Tactical Shifts for Forest Encounters</h3>
+        <p>You can no longer assume a cleared forest path remains safe. Overlapping fields of vision and designated rear-guards are now essential. </p>
+        <ul>
+        <li><strong>Formation changes:</strong> If you are running <a href="co-op-crossplay-solo-explained.html">co-op or crossplay</a> lobbies, standard wedge or single-file formations need to be tightened. The "point" player should proceed with extreme caution, while the player in the back needs to constantly check their six. </li>
+        <li><strong>Solo adjustments:</strong> For solo players, traversing the forest now means moving slower, relying heavily on audio cues, and keeping your back to solid geometry (like large rocks or unpathable terrain) whenever possible to prevent getting flanked.</li>
+        <li><strong>Engagement rules:</strong> Early community reports and estimates suggest at least one of these entities might utilize vertical space or heavy foliage concealment. While specific attack patterns are still being mapped by the player base, the prevailing advice is to avoid prolonged engagements. If an ambush triggers, use area-denial tools to create space and break line of sight rather than standing your ground to fight an unknown variable.</li>
+        </ul>
+        <h2>The Rosary: Unlocking the New Occult Item</h2>
+        <p>The second major content addition in 1.04 provides a map-wide objective: searching for new "hidden jewel boxes" scattered across the mainland. This directly incentivizes exploration of the map's outer edges, forcing players out of standard speedrun routes and into potentially dangerous, previously ignored territory.</p>
+        <h3>The Search Logistics</h3>
+        <p>Finding these boxes requires utilizing the in-game map. The developers noted that players must use the map to track them down, suggesting these aren't entirely blind hunts. You will likely need to cross-reference topographic anomalies or specific landmarks indicated on your navigational tools with the actual environment. </p>
+        <p>This creates a tense risk/reward loop. Searching for these boxes means spending more time exposed on the mainland, draining resources, and increasing the likelihood of hostile encounters. Expeditions must now choose between pushing deep into the earth for primary objectives or running sweeping patterns on the surface for the jewel boxes. </p>
+        <h3>What is The Rosary?</h3>
+        <p>Finding all the hidden jewel boxes unlocks <em>The Rosary</em> as a new Occult Item in the shop. While official statistical breakdowns aren't detailed in the patch notes, community theorycrafting is already aggressively analyzing its potential. </p>
+        <p>Given its religious and protective connotations, it is highly expected to offer localized Sanity shielding or perhaps a passive ward against the new ambush mechanics of the forest horrors. Until the exact mitigation numbers are confirmed through extensive testing, treat The Rosary as a high-priority acquisition. If it functions as expected, it will become a staple for dedicated support players, allowing teams to sustain longer surface expeditions without succumbing to madness.</p>
+        <h2>Command Wheel 2.0: Revolutionizing Cart Management</h2>
+        <p>Perhaps the most mechanically significant change for high-level survival play is the implementation of Command Wheel 2.0. The cart is the lifeline of any descent, acting as a mobile repository for loot, ammunition, and crucial survival gear. Previously, its movement could feel unwieldy. The lack of granular control often led to frustrating situations where the cart rolled directly into danger or lagged behind during a frantic retreat.</p>
+        <p>By popular demand, ACE Team has added the ability to explicitly instruct the cart to stop. This sounds simple on paper, but the tactical applications are massive.</p>
+        <h3>Navigating Proximity Limits</h3>
+        <p>The system operates strictly on a proximity basis. You cannot issue a halt order from across the map; you must be within a certain radius to interface with the cart's command structure. This forces the designated "cart handler" in your team to stay closely tethered to the payload. </p>
+        <ul>
+        <li><strong>Preventative stopping:</strong> If a scout triggers one of the new forest enemies ahead, the handler can instantly brake the cart, keeping your hard-earned resources out of the immediate kill zone. </li>
+        <li><strong>Dynamic cover:</strong> When engaged, having a stationary cart means you can use it as reliable, static cover or a resupply point without worrying about it continuing along a pre-pathed route into further darkness. </li>
+        <li><strong>Loadout distribution:</strong> This mechanic directly affects how you organize your inventory. Knowing you can park the cart securely means frontline players might opt to carry lighter personal loadouts, increasing their stamina regeneration for dodging, while leaving heavy ordnance on the cart just a few meters back.</li>
+        </ul>
+        <h2>Strategic Loadout Adjustments Post-1.04</h2>
+        <p>With the introduction of unpredictable enemies and better logistical control, the standard loadout meta is undergoing a rapid shift. The heavy reliance on slow, high-impact weaponry might become a liability if the new forest horrors rely on speed and surprise. Quick-draw defensive tools, flares, and traps are seeing a massive surge in utility for surface-level routing.</p>
+        <p>Furthermore, if your team is actively hunting the jewel boxes, stamina and movement speed become paramount. You need the physical endurance to cover ground quickly, check map coordinates, and move on before the area spawns escalate. The impending integration of The Rosary into team builds will likely create a dedicated "Warden" role—a player carrying specific Occult Items designed to keep the team's Sanity intact while the rest of the squad focuses on DPS and navigation.</p>
+        <p>Patch 1.04 is a strong indicator of the development philosophy moving forward. By weaving new threats directly into new exploration incentives, and providing better mechanical tools to handle logistics, the game is establishing a deeply interconnected and punishing gameplay loop. Update your game, review your map, and above all, keep your cart handler close.</p>
+
+        <div class="faq">
+          <h2>FAQ</h2>
+          <h3>How do you unlock The Rosary in The Mound: Omen of Cthulhu?</h3>
+          <p>You need to locate the newly added hidden jewel boxes scattered across the mainland area using your map. Finding all of them makes The Rosary available in the shop.</p>
+          <h3>What does the Command Wheel 2.0 change?</h3>
+          <p>It allows you to explicitly command the cart to stop and issue new directions, but you must be within a specific proximity range to the cart to issue these orders.</p>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">THE MOUND<span>: OOM</span></div>
+          <p class="footer-desc">
+            The ultimate fan-built guide and database for The Mound: Omen of Cthulhu. Developed to assist all explorers of the cold cognitive deep.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Database</h4>
+          <ul class="footer-links">
+            <li><a href="../bestiary.html" class="footer-link">Creature Bestiary</a></li>
+            <li><a href="../equipment.html" class="footer-link">Equipment Database</a></li>
+            <li><a href="../calculator.html" class="footer-link">Expedition Planner</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Site & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html" class="footer-link">About Us</a></li>
+            <li><a href="../contact.html" class="footer-link">Contact</a></li>
+            <li><a href="../privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="../privacy.html#terms" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul class="footer-links">
+            <li><a href="../guides.html" class="footer-link">Survival Guides</a></li>
+            <li><a href="../lore.html" class="footer-link">Mythos & Lore</a></li>
+            <li><a href="https://store.steampowered.com/app/2569760/The_Mound_Omen_of_Cthulhu/" class="footer-link" target="_blank">Steam Store</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Mound: Omen of Cthulhu Fan Wiki. All rights reserved. Game content and materials are trademarks of ACE Team / Nacon.</p>
+        <p>Designed by <a href="#" style="color: var(--primary-glow);">Antigravity</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="btn-back-to-top" aria-label="Back to top">▲</button>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
