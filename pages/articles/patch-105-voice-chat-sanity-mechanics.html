@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) — GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV21PXX090"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XV21PXX090');
+  </script>
+  <meta name="description" content="Patch 1.05 for The Mound: Omen of Cthulhu overhauls crossplay communication and fixes TSR/XeSS bugs. Learn why using Discord ruins the game&#x27;s horror.">
+  <meta name="keywords" content="the mound omen of cthulhu patch 1.05, voice chat fix, sanity mechanics, tsr xess fix, crossplay communication, the mound orb bug, achievement tracking, proximity chat horror">
+  <meta name="author" content="The Mound Fan Wiki Editors">
+
+  <title>Patch 1.05 Fixes Voice Chat and Highlights a Crucial Sanity Mechanic</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://themound.online/pages/articles/patch-105-voice-chat-sanity-mechanics.html">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="apple-touch-icon" href="../../favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://themound.online/pages/articles/patch-105-voice-chat-sanity-mechanics.html">
+  <meta property="og:title" content="Patch 1.05 Fixes Voice Chat and Highlights a Crucial Sanity Mechanic">
+  <meta property="og:description" content="Patch 1.05 for The Mound: Omen of Cthulhu overhauls crossplay communication and fixes TSR/XeSS bugs. Learn why using Discord ruins the game&#x27;s horror.">
+  <meta property="og:image" content="https://themound.online/images/auto_patch-105-voice-chat-sanity-mechanics.webp">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Patch 1.05 Fixes Voice Chat and Highlights a Crucial Sanity Mechanic">
+  <meta property="twitter:description" content="Patch 1.05 for The Mound: Omen of Cthulhu overhauls crossplay communication and fixes TSR/XeSS bugs. Learn why using Discord ruins the game&#x27;s horror.">
+  <meta property="twitter:image" content="https://themound.online/images/auto_patch-105-voice-chat-sanity-mechanics.webp">
+
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .article-body { max-width: 800px; margin: 0 auto; }
+    .article-meta { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 1.5rem; }
+    .article-body h2 { font-size: 1.6rem; margin-top: 2.75rem; margin-bottom: 1rem; }
+    .article-body h3 { font-size: 1.2rem; margin-top: 1.75rem; margin-bottom: 0.6rem; color: var(--primary-glow); }
+    .article-body p { color: var(--text-secondary); line-height: 1.85; margin-bottom: 1.25rem; font-size: 1.02rem; }
+    .article-body ul, .article-body ol { color: var(--text-secondary); line-height: 1.85; margin: 0 0 1.5rem 1.3rem; }
+    .article-body li { margin-bottom: 0.6rem; }
+    .article-body a { color: var(--primary-glow); }
+    .key-facts { background: rgba(0,255,204,0.05); border: 1px solid rgba(0,255,204,0.2); border-radius: 10px; padding: 1.5rem 1.75rem; margin: 0 0 2.5rem; }
+    .key-facts h2 { margin-top: 0; font-size: 1.15rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--primary-glow); }
+    .key-facts table { width: 100%; border-collapse: collapse; }
+    .key-facts td { padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.06); vertical-align: top; color: var(--text-secondary); }
+    .key-facts td:first-child { font-weight: 600; color: var(--text-primary); width: 38%; }
+    .specs-table, .cmp-table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; font-size: 0.95rem; }
+    .specs-table th, .specs-table td, .cmp-table th, .cmp-table td { text-align: left; padding: 0.7rem 0.9rem; border: 1px solid rgba(255,255,255,0.08); color: var(--text-secondary); vertical-align: top; }
+    .specs-table th, .cmp-table th { background: rgba(177,0,255,0.08); color: var(--text-primary); }
+    .specs-table td:first-child, .cmp-table td:first-child { font-weight: 600; color: var(--text-primary); }
+    .breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; }
+    .breadcrumbs a { color: var(--text-secondary); }
+    .note { font-size: 0.9rem; color: var(--text-muted); font-style: italic; border-left: 3px solid var(--secondary-glow, #7a00ff); padding-left: 1rem; margin: 2rem 0; }
+    .badge { display:inline-block; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:rgba(177,0,255,0.2); color:#d9a6ff; padding:0.2rem 0.6rem; border-radius:4px; vertical-align:middle; margin-left:0.5rem; }
+    .creature, .realm { border-left: 3px solid var(--primary-glow); padding-left: 1.25rem; margin: 1.5rem 0; }
+    .creature h3, .realm h3 { margin-top: 0; }
+    .tag { display:inline-block; font-size:0.68rem; letter-spacing:0.06em; text-transform:uppercase; padding:0.15rem 0.55rem; border-radius:4px; vertical-align:middle; margin-left:0.5rem; }
+    .tag-confirmed { background:rgba(0,255,204,0.18); color:#7dffe6; }
+    .tag-expected { background:rgba(177,0,255,0.2); color:#d9a6ff; }
+    .faq h3 { color: var(--text-primary); }
+    @media (max-width: 600px) { .cmp-table { font-size: 0.8rem; } .cmp-table th, .cmp-table td { padding: 0.45rem 0.5rem; } }
+  </style>
+
+  <!-- Structured Data: Breadcrumb + Article (+ FAQ) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://themound.online/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "News & Guides",
+          "item": "https://themound.online/pages/articles/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Patch 1.05 Fixes Voice Chat and Highlights a Crucial Sanity Mechanic",
+          "item": "https://themound.online/pages/articles/patch-105-voice-chat-sanity-mechanics.html"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Patch 1.05 Fixes Voice Chat and Highlights a Crucial Sanity Mechanic",
+      "description": "Patch 1.05 for The Mound: Omen of Cthulhu overhauls crossplay communication and fixes TSR/XeSS bugs. Learn why using Discord ruins the game's horror.",
+      "image": "https://themound.online/images/auto_patch-105-voice-chat-sanity-mechanics.webp",
+      "datePublished": "2026-09-10",
+      "dateModified": "2026-09-10",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Organization",
+        "name": "The Mound Fan Wiki"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Mound Fan Wiki"
+      },
+      "about": {
+        "@type": "VideoGame",
+        "name": "The Mound: Omen of Cthulhu"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is my voice chat robotic in crossplay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Prior to Patch 1.05, a bug caused voice corruption between PC and console players. Updating to the latest version resolves this issue entirely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I use Discord for The Mound: Omen of Cthulhu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The developers strongly advise against it. The game ties its sanity mechanics directly to the in-game spatial audio, meaning third-party apps will completely bypass the intended horror experience."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do I have to reset my graphics every time I launch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Patch 1.05 addresses a specific bug where TSR and XeSS upscaling profiles failed to save. You should now be able to set your preferences once without them reverting upon restart."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- HEADER / STICKY NAVIGATION -->
+  <header class="header" id="main-header">
+    <div class="container nav-container">
+      <a href="../../index.html" class="logo" id="nav-logo">
+        THE MOUND<span>: OMEN OF CTHULHU</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li class="nav-item"><a href="../../index.html" class="nav-link" id="nav-home">Home</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link active" id="nav-news">News</a></li>
+          <li class="nav-item"><a href="../guides.html" class="nav-link" id="nav-guides">Guides</a></li>
+          <li class="nav-item"><a href="../lore.html" class="nav-link" id="nav-lore">Lore</a></li>
+          <li class="nav-item"><a href="../bestiary.html" class="nav-link" id="nav-bestiary">Bestiary</a></li>
+          <li class="nav-item"><a href="../equipment.html" class="nav-link" id="nav-equipment">Equipment</a></li>
+          <li class="nav-item"><a href="../calculator.html" class="nav-link" id="nav-calculator">Planner</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="nav-hamburger-toggle" aria-label="Toggle mobile menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SUB HERO -->
+  <section class="sub-hero" id="article-hero">
+    <div class="sub-hero-bg" style="background-image: url('../../images/auto_patch-105-voice-chat-sanity-mechanics.webp');"></div>
+    <div class="sub-hero-overlay"></div>
+    <div class="container sub-hero-content">
+      <h1 class="sub-hero-title" style="font-size: 2.4rem;">Patch 1.05 Fixes Voice Chat and Highlights a Crucial Sanity Mechanic</h1>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section style="padding-top: 3rem;">
+    <div class="container">
+      <article class="article-body animate-fade-in">
+
+        <div class="breadcrumbs">
+          <a href="../../index.html">Home</a> › <a href="index.html">News &amp; Guides</a> › Patch 1.05 Fixes Voice Chat and Highlights a Crucial Sanity Mechanic
+        </div>
+
+        <div class="article-meta">
+          📅 Published September 10, 2026 · Last updated September 10, 2026 · By The Mound Fan Wiki Editors · ~7 min read
+        </div>
+
+        <div class="key-facts">
+          <h2>The Quick Answer</h2>
+          <table>
+            <tr><td>Update Version</td><td>Patch 1.05</td></tr>
+            <tr><td>Key Feature</td><td>Complete voice chat overhaul</td></tr>
+            <tr><td>Crucial Fix</td><td>TSR and XeSS profile settings saving properly</td></tr>
+            <tr><td>Developer Advice</td><td>Use in-game chat for sanity effects</td></tr>
+          </table>
+        </div>
+
+        <p>The development team at ACE Team has officially rolled out Patch 1.05 for <em>The Mound: Omen of Cthulhu</em>. While the studio humbly describes this update as a "relatively small patch," its contents actually address some of the most frustrating friction points players have encountered since launch. Released on September 9, 2026, across Steam, PlayStation 5, and Xbox Series X|S, this hotfix primarily targets severe audio corruption, graphics profile bugs, and a specific progression blocker. </p>
+        <p>However, hidden within the routine patch notes is a vital piece of advice from the developers that fundamentally changes how you should approach playing this game with your friends. If you have been relying on third-party communication software to organize your expeditions, you are actively sabotaging your own experience.</p>
+        <p>Here is a detailed breakdown of everything included in Patch 1.05 and why you need to rethink your communication strategy before your next descent.</p>
+        <h2>The Crossplay Communication Crisis Resolved</h2>
+        <p>Cooperative survival in a Lovecraftian setting requires flawless communication. You need to be able to call out resource locations, coordinate stealth approaches against cosmic horrors, and panic collectively when a plan falls apart. Unfortunately, a persistent bug has been plaguing squads, particularly those utilizing the game's <a href="co-op-crossplay-solo-explained.html">co-op and crossplay functionality</a>. </p>
+        <p>Players across various platforms reported that the in-game voice chat would spontaneously corrupt. Teammates would suddenly sound like dial-up modems, robotic androids, or their audio would drop out entirely. This issue was especially prevalent when mixing PC players with those on PS5 or Xbox Series X|S, leading to fractured teamwork and unnecessary squad wipes. </p>
+        <p>Patch 1.05 brings a complete overhaul to the voice chat backend. ACE Team has thoroughly tested this reworked system to ensure stability across all supported platforms. Following the update, the robotic distortion and sudden dropouts should be entirely eradicated, allowing for crystal-clear callouts regardless of what hardware your teammates are running. </p>
+        <h2>The Crucial Link Between Voice Chat and Sanity Mechanics</h2>
+        <p>Fixing the voice chat was a priority not just for basic functionality, but because it is intertwined with the core design of <em>The Mound: Omen of Cthulhu</em>. In the patch notes, ACE Team included a direct plea to the player base: <em>"Since The Mound: Omen of Cthulhu uses spatial audio, and some sanity effects use voice, we recommend playing using the in-game voice chat."</em></p>
+        <p>This is the most important takeaway from the 1.05 update. </p>
+        <p>Modern co-op horror relies heavily on audio design to build tension, a trend heavily popularized by other titles in the genre. If you are interested in how this game stacks up against its peers in that regard, you can check out our comparison of <a href="vs-gtfo-lethal-company-darktide.html">how it handles horror versus Lethal Company and GTFO</a>. But <em>The Mound</em> takes the concept of proximity chat several steps further by wiring it directly into the <a href="sanity-system-explained.html">sanity system</a>.</p>
+        <p>When you use a third-party application like Discord, Party Chat, or TeamSpeak, you receive a clean, unfiltered, and omnidirectional audio feed from your friends. You hear them perfectly whether they are standing right next to you or are lost three levels deep in a subterranean ruin. </p>
+        <p>By bypassing the in-game audio, you are effectively cheating yourself out of the game's most terrifying mechanics. The game utilizes advanced spatial audio. When a teammate speaks in-game, their voice originates from their character model. If they walk down a long stone hallway, their voice will echo realistically. If a heavy monolithic door slams shut between you, their screams will be muffled by the thick stone. This creates an unparalleled sense of isolation when you get separated.</p>
+        <p>More importantly, your character's mental state directly manipulates the VoIP feed. As your sanity drains from witnessing eldritch horrors or spending too much time in the dark, the game begins to mess with your perception of reality, and this includes what you hear from your friends. </p>
+        <p>If your sanity is critically low, you might hear a teammate calling for help from the darkness, only to find out they never spoke at all—the game synthesized their voice to lure you away. Conversely, a teammate whose mind is fracturing might sound distorted, pitching down into demonic registers or echoing unnaturally, signaling to the rest of the group that they are losing their grip on reality. </p>
+        <p>If you are sitting in a private Discord call, none of this happens. You will miss the auditory hallucinations, the terrifying silence of being truly separated, and the mechanical cues that someone in your squad is going mad. To truly experience the psychological horror the developers intended, you must mute your third-party apps and rely entirely on the in-game voice chat. </p>
+        <h2>Technical Polish: Securing Your Upscaling Profiles</h2>
+        <p>Beyond the audio overhaul, Patch 1.05 also brings some much-needed relief for PC players regarding graphics settings. Specifically, the update addresses a bug that prevented profile settings related to TSR (Temporal Super Resolution) and XeSS (Xe Super Sampling) from saving correctly.</p>
+        <p>To maintain playable frame rates while exploring visually dense, fog-heavy environments, many players rely on these upscaling technologies. They allow the game to render at a lower base resolution before being smartly upscaled to your monitor's native resolution, drastically improving performance without heavily sacrificing visual quality. If you are struggling to maintain a smooth framerate, verifying your setup against the <a href="system-requirements-expected.html">expected system requirements</a> and utilizing these upscalers is highly recommended.</p>
+        <p>Prior to this hotfix, the game was failing to remember these specific upscaling choices between sessions. Players were forced to navigate through the options menu every single time they launched the application to re-enable TSR or XeSS and adjust their sharpness preferences. This was a tedious process that disrupted the flow of getting into a match. </p>
+        <p>With 1.05 installed, your profile settings will now accurately save and apply upon startup. Once you find the perfect balance between performance and visual fidelity for your specific hardware, the game will properly respect those choices indefinitely. </p>
+        <h2>Squashing Progression Blockers and Achievement Bugs</h2>
+        <p>The patch also tackles a specific gameplay hurdle that was halting progress for numerous expedition teams. In the titular "Mound" level, there is a sequence involving a specific, hostile orb entity. Due to a scripting error, this orb was frequently failing to register incoming damage properly. </p>
+        <p>Teams would pour ammunition and resources into the entity, only to find its health pool completely static, effectively soft-locking the mission and forcing players to abandon the run. The developers have successfully identified the root cause of this invulnerability bug. The orb now correctly registers hitboxes and damage values, allowing squads to reliably clear the encounter and progress deeper into the subterranean network.</p>
+        <p>Additionally, while not explicitly detailed in the brief Steam announcement, community reports from the game's official subreddit confirm that the patch includes fixes for achievement tracking. Several achievements that require cumulative actions—such as dispatching a specific number of enemies or surviving multiple extractions—were previously stalling out. Completionists and trophy hunters can now resume their grind with confidence, knowing their milestones are being accurately recorded by the backend servers.</p>
+        <h2>Looking Ahead: Jungle Terrors and The Next Big Patch</h2>
+        <p>Perhaps the most exciting part of the Patch 1.05 notes is what ACE Team teased for the future. The announcement opens with a pointed question: <em>"Have the new creatures lurking within the jungle been causing you trouble?"</em> </p>
+        <p>The developers then explicitly state that they are currently working on their "next big patch." This brief mention serves as both a taunt and a roadmap. The jungle biomes in the game are already incredibly hostile environments, known for poor visibility and aggressive fauna. The fact that the developers are specifically highlighting new creatures causing trouble suggests they are closely monitoring telemetry data and player death heatmaps. </p>
+        <p>This aligns with what we know about the game's post-launch plans and the <a href="creatures-confirmed-preview.html">creatures confirmed to be prowling the depths</a>. It is highly likely that the upcoming major content update will expand upon the surface-level jungle ruins, potentially introducing new Lovecraftian variations of flora and fauna, or perhaps an entirely new apex predator that forces players to rethink their loadouts before diving underground. </p>
+        <p>For now, the focus should be on downloading Patch 1.05, configuring your microphones properly, and ensuring your squad is ready to face the psychological toll of the dark. Remember, if you hear your friend whispering from the shadows, make sure they are actually the one talking.</p>
+        <h2>Sources</h2>
+        <ul>
+        <li>Steam News: Patch 1.05 - Voice Chat Rework &amp; Other Hotfixes</li>
+        <li>Community Bug Reports (Reddit / ACETeam Subreddit)</li>
+        </ul>
+
+        <div class="faq">
+          <h2>FAQ</h2>
+          <h3>Why is my voice chat robotic in crossplay?</h3>
+          <p>Prior to Patch 1.05, a bug caused voice corruption between PC and console players. Updating to the latest version resolves this issue entirely.</p>
+          <h3>Should I use Discord for The Mound: Omen of Cthulhu?</h3>
+          <p>The developers strongly advise against it. The game ties its <a href=\"sanity-system-explained.html\">sanity mechanics</a> directly to the in-game spatial audio, meaning third-party apps will completely bypass the intended horror experience.</p>
+          <h3>Why do I have to reset my graphics every time I launch?</h3>
+          <p>Patch 1.05 addresses a specific bug where TSR and XeSS upscaling profiles failed to save. You should now be able to set your preferences once without them reverting upon restart.</p>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">THE MOUND<span>: OOM</span></div>
+          <p class="footer-desc">
+            The ultimate fan-built guide and database for The Mound: Omen of Cthulhu. Developed to assist all explorers of the cold cognitive deep.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Database</h4>
+          <ul class="footer-links">
+            <li><a href="../bestiary.html" class="footer-link">Creature Bestiary</a></li>
+            <li><a href="../equipment.html" class="footer-link">Equipment Database</a></li>
+            <li><a href="../calculator.html" class="footer-link">Expedition Planner</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Site & Legal</h4>
+          <ul class="footer-links">
+            <li><a href="../about.html" class="footer-link">About Us</a></li>
+            <li><a href="../contact.html" class="footer-link">Contact</a></li>
+            <li><a href="../privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="../privacy.html#terms" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul class="footer-links">
+            <li><a href="../guides.html" class="footer-link">Survival Guides</a></li>
+            <li><a href="../lore.html" class="footer-link">Mythos & Lore</a></li>
+            <li><a href="https://store.steampowered.com/app/2569760/The_Mound_Omen_of_Cthulhu/" class="footer-link" target="_blank">Steam Store</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Mound: Omen of Cthulhu Fan Wiki. All rights reserved. Game content and materials are trademarks of ACE Team / Nacon.</p>
+        <p>Designed by <a href="#" style="color: var(--primary-glow);">Antigravity</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="btn-back-to-top" aria-label="Back to top">▲</button>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
