@@ -513,4 +513,11 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://themound.online/pages/articles/patch-1-06-ghost-inventory-memory-optimizations.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
